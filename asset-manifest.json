@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/portfolio-muhammadyunusfirdaus.github.io/static/css/main.8e52d062.css",
+    "main.js": "/portfolio-muhammadyunusfirdaus.github.io/static/js/main.e62ba89b.js",
+    "static/js/453.1c6657c2.chunk.js": "/portfolio-muhammadyunusfirdaus.github.io/static/js/453.1c6657c2.chunk.js",
+    "index.html": "/portfolio-muhammadyunusfirdaus.github.io/index.html",
+    "main.8e52d062.css.map": "/portfolio-muhammadyunusfirdaus.github.io/static/css/main.8e52d062.css.map",
+    "main.e62ba89b.js.map": "/portfolio-muhammadyunusfirdaus.github.io/static/js/main.e62ba89b.js.map",
+    "453.1c6657c2.chunk.js.map": "/portfolio-muhammadyunusfirdaus.github.io/static/js/453.1c6657c2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e52d062.css",
+    "static/js/main.e62ba89b.js"
+  ]
+}
