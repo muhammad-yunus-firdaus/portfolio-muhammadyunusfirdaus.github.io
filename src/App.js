@@ -19,11 +19,15 @@ import Footer from './components/Footer';
 export default function App() {
   useEffect(() => {
     AOS.init({
-      duration: 600,
-      once: true,
-      easing: 'ease-out-cubic',
-      offset: 60,
+      duration: 500,
+      once: false,
+      mirror: true,
+      easing: 'ease-out-quad',
+      offset: 50,
       delay: 0,
+      anchorPlacement: 'bottom-bottom',
+      throttleDelay: 99,
+      debounceDelay: 50,
     });
     AOS.refresh();
   }, []);

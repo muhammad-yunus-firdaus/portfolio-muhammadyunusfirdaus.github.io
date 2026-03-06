@@ -166,9 +166,23 @@ body {
   }
 }
 
-/* ─── AOS Override — lighter feel ─── */
+/* ─── AOS Override — optimized for smooth performance ─── */
 [data-aos] {
-  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1) !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* Smoother transitions */
+[data-aos].aos-animate {
+  transition-duration: 500ms !important;
+}
+
+[data-aos]:not(.aos-animate) {
+  transition-duration: 350ms !important;
 }
 
 /* ─── Loading Screen Animations ─── */
