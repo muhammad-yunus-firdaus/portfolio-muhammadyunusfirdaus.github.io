@@ -23,7 +23,7 @@ export default function LoadingScreen() {
             <div className="flex flex-col items-center gap-4">
                 {/* Logo */}
                 <img
-                    src="/logo.png"
+                    src={`${process.env.PUBLIC_URL}/logo.png`}
                     alt="Logo"
                     className="w-16 h-16 object-contain animate-pulse-logo"
                     style={{ filter: 'brightness(0) invert(1)' }}

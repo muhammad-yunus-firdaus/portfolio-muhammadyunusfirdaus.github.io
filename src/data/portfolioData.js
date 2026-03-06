@@ -9,6 +9,9 @@ import {
 } from 'react-icons/fa';
 import { SiMysql, SiPostgresql } from 'react-icons/si';
 
+/* ─── Base URL for GitHub Pages ─── */
+const BASE_URL = process.env.PUBLIC_URL || '';
+
 /* ─── Social Links ─── */
 export const socialLinks = {
   github: 'https://github.com/muhammad-yunus-firdaus',
@@ -60,7 +63,7 @@ export const iconMap = {
 /* ─── Projects ─── */
 export const projects = [
   {
-    image: '/Images/manajemen-tugas/Dashboard.png',
+    image: `${BASE_URL}/Images/manajemen-tugas/Dashboard.png`,
     titleId: 'Website Manajemen Tugas',
     titleEn: 'Task Management Website',
     shortDescId: 'Website manajemen tugas menggunakan Framework Django dan database SQLite.',
@@ -89,15 +92,15 @@ export const projects = [
     githubLink: 'https://github.com/muhammad-yunus-firdaus',
     technologies: ['Python', 'Django', 'SQLite', 'HTML', 'CSS', 'JavaScript'],
     previewImages: [
-      '/Images/manajemen-tugas/Login.png',
-      '/Images/manajemen-tugas/Dashboard.png',
-      '/Images/manajemen-tugas/Daftar_Tugas.png',
-      '/Images/manajemen-tugas/Tambah_Tugas.png',
-      '/Images/manajemen-tugas/Detail_Tugas.png',
+      `${BASE_URL}/Images/manajemen-tugas/Login.png`,
+      `${BASE_URL}/Images/manajemen-tugas/Dashboard.png`,
+      `${BASE_URL}/Images/manajemen-tugas/Daftar_Tugas.png`,
+      `${BASE_URL}/Images/manajemen-tugas/Tambah_Tugas.png`,
+      `${BASE_URL}/Images/manajemen-tugas/Detail_Tugas.png`,
     ],
   },
   {
-    image: '/Images/futsal/admin/Kelola_Lapangan_Admin.png',
+    image: `${BASE_URL}/Images/futsal/admin/Kelola_Lapangan_Admin.png`,
     titleId: 'Website Pemesanan Lapangan Futsal',
     titleEn: 'Futsal Court Booking Website',
     shortDescId: 'Aplikasi web pemesanan lapangan futsal menggunakan Framework Laravel dan database MySQL.',
@@ -131,33 +134,33 @@ export const projects = [
         roleId: 'Admin',
         roleEn: 'Admin',
         images: [
-          '/Images/futsal/admin/Login.png',
-          '/Images/futsal/admin/Dashboard_Admin.png',
-          '/Images/futsal/admin/Jadwal_Booking_Admin.png',
-          '/Images/futsal/admin/Kelola_Booking_Admin.png',
-          '/Images/futsal/admin/Tambah_Booking_Admin.png',
-          '/Images/futsal/admin/Kelola_Lapangan_Admin.png',
-          '/Images/futsal/admin/Tambah_Lapangan_Admin.png',
-          '/Images/futsal/admin/Kelola_Pengguna_Admin.png',
-          '/Images/futsal/admin/Tambah_Pengguna_Admin.png',
+          `${BASE_URL}/Images/futsal/admin/Login.png`,
+          `${BASE_URL}/Images/futsal/admin/Dashboard_Admin.png`,
+          `${BASE_URL}/Images/futsal/admin/Jadwal_Booking_Admin.png`,
+          `${BASE_URL}/Images/futsal/admin/Kelola_Booking_Admin.png`,
+          `${BASE_URL}/Images/futsal/admin/Tambah_Booking_Admin.png`,
+          `${BASE_URL}/Images/futsal/admin/Kelola_Lapangan_Admin.png`,
+          `${BASE_URL}/Images/futsal/admin/Tambah_Lapangan_Admin.png`,
+          `${BASE_URL}/Images/futsal/admin/Kelola_Pengguna_Admin.png`,
+          `${BASE_URL}/Images/futsal/admin/Tambah_Pengguna_Admin.png`,
         ],
       },
       {
         roleId: 'User',
         roleEn: 'User',
         images: [
-          '/Images/futsal/user/Login.png',
-          '/Images/futsal/user/Dashboard_User.png',
-          '/Images/futsal/user/Lapangan_User.png',
-          '/Images/futsal/user/Pemesanan_Lapangan_User.png',
-          '/Images/futsal/user/Jadwal_User.png',
-          '/Images/futsal/user/Riwayat_Pesanan_User.png',
+          `${BASE_URL}/Images/futsal/user/Login.png`,
+          `${BASE_URL}/Images/futsal/user/Dashboard_User.png`,
+          `${BASE_URL}/Images/futsal/user/Lapangan_User.png`,
+          `${BASE_URL}/Images/futsal/user/Pemesanan_Lapangan_User.png`,
+          `${BASE_URL}/Images/futsal/user/Jadwal_User.png`,
+          `${BASE_URL}/Images/futsal/user/Riwayat_Pesanan_User.png`,
         ],
       },
     ],
   },
   {
-    image: '/Images/klasifikasi-sepatu/thumbnail.jpg',
+    image: `${BASE_URL}/Images/klasifikasi-sepatu/thumbnail.jpg`,
     titleId: 'Klasifikasi Sepatu dengan CNN',
     titleEn: 'Shoe Classification with CNN',
     shortDescId: 'Sistem cerdas yang mengidentifikasi merek sepatu melalui pemrosesan gambar dengan akurasi 93%.',
@@ -184,7 +187,7 @@ export const projects = [
     previewImages: [],
   },
   {
-    image: '/Images/deteksi-tomat/thumbnail.jpg',
+    image: `${BASE_URL}/Images/deteksi-tomat/thumbnail.jpg`,
     titleId: 'Deteksi & Penghitungan Buah Tomat',
     titleEn: 'Tomato Detection & Counting',
     shortDescId: 'Sistem deteksi berbasis YOLOv8 untuk menghitung hasil produksi tomat melalui kamera.',

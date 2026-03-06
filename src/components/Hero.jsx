@@ -83,7 +83,7 @@ export default function Hero() {
                         >
                             <img
                                 ref={cardRef}
-                                src="/profile.JPG"
+                                src={`${process.env.PUBLIC_URL}/profile.JPG`}
                                 alt="Muhammad Yunus Firdaus"
                                 className="relative w-56 h-72 sm:w-64 sm:h-80 md:w-72 md:h-96 rounded-2xl object-cover shadow-xl transition-transform duration-200 ease-out will-change-transform"
                             />

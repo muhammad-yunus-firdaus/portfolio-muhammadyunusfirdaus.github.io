@@ -31,7 +31,7 @@ function Lightbox({ image, title, onClose }) {
                     ✕
                 </button>
                 <img
-                    src={`/certificates/${image}`}
+                    src={`${process.env.PUBLIC_URL}/certificates/${image}`}
                     alt={title}
                     className="w-full h-auto max-h-[85vh] object-contain rounded-xl"
                 />
@@ -50,7 +50,7 @@ function CertificateCard({ image, title, year, issuer, onView, viewText }) {
         >
             <div className="relative pt-[56.25%] w-full overflow-hidden">
                 <img
-                    src={`/certificates/${image}`}
+                    src={`${process.env.PUBLIC_URL}/certificates/${image}`}
                     alt={title}
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
