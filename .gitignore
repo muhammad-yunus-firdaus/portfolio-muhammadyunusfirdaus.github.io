@@ -1,23 +1,119 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ================================================================
+# .gitignore - Portfolio Muhammad Yunus Firdaus
+# ================================================================
+# Referensi: https://help.github.com/articles/ignoring-files/
+# ================================================================
 
-# dependencies
+# ─────────────────────────────────────────────────────────────────
+# DEPENDENCIES
+# ─────────────────────────────────────────────────────────────────
 /node_modules
 /.pnp
 .pnp.js
+package-lock.json
 
-# testing
+# ─────────────────────────────────────────────────────────────────
+# TESTING
+# ─────────────────────────────────────────────────────────────────
 /coverage
+*.lcov
 
-# production
+# ─────────────────────────────────────────────────────────────────
+# PRODUCTION BUILD
+# ─────────────────────────────────────────────────────────────────
 /build
+/dist
+/out
 
-# misc
-.DS_Store
+# ─────────────────────────────────────────────────────────────────
+# ENVIRONMENT VARIABLES (KEAMANAN!)
+# ─────────────────────────────────────────────────────────────────
+.env
+.env.*
 .env.local
+.env.development
 .env.development.local
+.env.test
 .env.test.local
+.env.production
 .env.production.local
+*.env
 
+# ─────────────────────────────────────────────────────────────────
+# IDE & EDITOR
+# ─────────────────────────────────────────────────────────────────
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# ─────────────────────────────────────────────────────────────────
+# OPERATING SYSTEM
+# ─────────────────────────────────────────────────────────────────
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.Trash-*
+
+# ─────────────────────────────────────────────────────────────────
+# LOGS & DEBUG
+# ─────────────────────────────────────────────────────────────────
+logs/
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ─────────────────────────────────────────────────────────────────
+# CACHE & TEMPORARY FILES
+# ─────────────────────────────────────────────────────────────────
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+*.tmp
+*.temp
+*.bak
+*.backup
+.turbo/
+
+# ─────────────────────────────────────────────────────────────────
+# MISC
+# ─────────────────────────────────────────────────────────────────
+*.pid
+*.seed
+*.pid.lock
+.npm
+.yarn-integrity
+
+# ─────────────────────────────────────────────────────────────────
+# LOCAL DEVELOPMENT
+# ─────────────────────────────────────────────────────────────────
+*.local
+.vercel
+.netlify
+
+Rangkuman_Project.txt

@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Portfolio Muhammad Yunus Firdaus
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Website portfolio personal untuk menampilkan profil, pengalaman, keahlian, sertifikat, dan project.
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-19.1.0-61DAFB?logo=react&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4.17-06B6D4?logo=tailwindcss&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+| Teknologi | Deskripsi |
+|-----------|-----------|
+| **React 19** | Library UI berbasis komponen |
+| **TailwindCSS** | Utility-first CSS framework |
+| **AOS** | Animate On Scroll library |
+| **React Icons** | Library ikon (Font Awesome, Simple Icons) |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Fitur Utama
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Multi-bahasa** — Toggle Indonesia / English (disimpan di localStorage)
+- **Responsive Design** — Mobile-friendly dengan hamburger menu
+- **Dark Theme** — Konsisten dengan glassmorphism effect
+- **Smooth Animations** — AOS scroll animations & CSS transitions
+- **Preview Modal** — Carousel lightbox untuk screenshot project
+- **Scroll Spy** — Navbar otomatis highlight section aktif
 
-### `npm test`
+## Sections
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Loading Screen** — Splash screen dengan animasi
+2. **Hero** — Nama, bio singkat, foto dengan gradient glow
+3. **About** — Biodata & personal info
+4. **Experience** — Timeline pengalaman kerja & organisasi
+5. **Skills** — Grid teknologi yang dikuasai
+6. **Certificates** — Sertifikat dengan lightbox modal
+7. **Projects** — Showcase project dengan preview & GitHub link
+8. **Contact** — Link sosial media & email
 
-### `npm run build`
+## Author
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Muhammad Yunus Firdaus**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- GitHub: [@muhammad-yunus-firdaus](https://github.com/muhammad-yunus-firdaus)
+- LinkedIn: [Muhammad Yunus Firdaus](https://www.linkedin.com/in/muhammad-yunus-firdaus-692623334/)
+- Email: yunusfirdauss123@gmail.com
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+© 2026 Muhammad Yunus Firdaus
