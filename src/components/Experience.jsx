@@ -109,13 +109,15 @@ const orgExperience = [
         icon: FaUsers,
         titleId: 'Anggota HIMATIF',
         titleEn: 'HIMATIF Member',
-        company: 'Himpunan Mahasiswa Teknik Informatika',
-        period: 'Mar 2021 - Sekarang',
+        company: 'Himpunan Mahasiswa Teknik Informatika | Divisi Minat & Bakat',
+        period: 'Dec 2023 - Apr 2025',
         pointsId: [
-            'Berkontribusi aktif dalam program kerja himpunan dan terlibat dalam kepanitiaan acara internal kampus',
+            'Mengelola jadwal kegiatan olahraga anggota',
+            'Berkontribusi aktif dalam program kerja dan kepanitiaan acara internal kampus',
         ],
         pointsEn: [
-            'Actively contributed to organization programs and participated in campus event committees',
+            'Managed sports activity schedules for members',
+            'Actively contributed to work programs and internal campus event committees',
         ],
     },
     {
@@ -124,6 +126,7 @@ const orgExperience = [
         titleEn: 'Leader MIPS 2024',
         company: 'HIMATIF',
         period: '2024',
+        tag: 'Kepanitiaan',
         pointsId: [
             'Memimpin dan mengkoordinasi kegiatan MIPS 2024',
         ],
@@ -137,6 +140,7 @@ const orgExperience = [
         titleEn: 'Creative Media Division',
         company: 'Kegiatan Ramadhan 1445 H — STMIK Amik Bandung',
         period: '18 Mar 2024',
+        tag: 'Kepanitiaan',
         pointsId: [
             'Merancang konsep dan ide untuk program "Ramadhan Podcast"',
             'Menyusun naskah dan daftar pertanyaan wawancara untuk narasumber',
@@ -154,6 +158,7 @@ const orgExperience = [
         titleEn: 'PDD Division',
         company: 'Seminar "Riding The Waves Of Cyber Space"',
         period: '27 Apr 2024',
+        tag: 'Kepanitiaan',
         pointsId: [
             'Merancang desain poster, banner, dan sertifikat untuk kebutuhan acara',
             'Bertanggung jawab penuh atas dokumentasi selama acara berlangsung',
@@ -181,9 +186,16 @@ function TimelineColumn({ items, lang }) {
                             </div>
                             <div className="glass-card rounded-xl p-4 hover:border-blue-500/30 transition-colors duration-200">
                                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1.5">
-                                    <h3 className="text-sm font-semibold text-white">
-                                        {lang === 'id' ? exp.titleId : exp.titleEn}
-                                    </h3>
+                                    <div className="flex items-center gap-2 flex-wrap">
+                                        <h3 className="text-sm font-semibold text-white">
+                                            {lang === 'id' ? exp.titleId : exp.titleEn}
+                                        </h3>
+                                        {exp.tag && (
+                                            <span className="text-[9px] px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30 font-medium">
+                                                {exp.tag}
+                                            </span>
+                                        )}
+                                    </div>
                                     <span className="text-[11px] text-blue-400/70 font-medium shrink-0">
                                         {exp.period}
                                     </span>
