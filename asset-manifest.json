@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/portfolio-muhammadyunusfirdaus.github.io/static/css/main.c8a42d05.css",
-    "main.js": "/portfolio-muhammadyunusfirdaus.github.io/static/js/main.026ae374.js",
+    "main.css": "/portfolio-muhammadyunusfirdaus.github.io/static/css/main.8bc3bbde.css",
+    "main.js": "/portfolio-muhammadyunusfirdaus.github.io/static/js/main.1f5b7ebc.js",
     "static/js/453.1c6657c2.chunk.js": "/portfolio-muhammadyunusfirdaus.github.io/static/js/453.1c6657c2.chunk.js",
     "index.html": "/portfolio-muhammadyunusfirdaus.github.io/index.html",
-    "main.c8a42d05.css.map": "/portfolio-muhammadyunusfirdaus.github.io/static/css/main.c8a42d05.css.map",
-    "main.026ae374.js.map": "/portfolio-muhammadyunusfirdaus.github.io/static/js/main.026ae374.js.map",
+    "main.8bc3bbde.css.map": "/portfolio-muhammadyunusfirdaus.github.io/static/css/main.8bc3bbde.css.map",
+    "main.1f5b7ebc.js.map": "/portfolio-muhammadyunusfirdaus.github.io/static/js/main.1f5b7ebc.js.map",
     "453.1c6657c2.chunk.js.map": "/portfolio-muhammadyunusfirdaus.github.io/static/js/453.1c6657c2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c8a42d05.css",
-    "static/js/main.026ae374.js"
+    "static/css/main.8bc3bbde.css",
+    "static/js/main.1f5b7ebc.js"
   ]
 }
