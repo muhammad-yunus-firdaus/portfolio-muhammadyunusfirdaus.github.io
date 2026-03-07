@@ -126,7 +126,8 @@ const orgExperience = [
         titleEn: 'Leader MIPS 2024',
         company: 'HIMATIF',
         period: '2024',
-        tag: 'Kepanitiaan',
+        tagId: 'Kepanitiaan',
+        tagEn: 'Committee',
         pointsId: [
             'Memimpin dan mengkoordinasi kegiatan MIPS 2024',
         ],
@@ -140,7 +141,8 @@ const orgExperience = [
         titleEn: 'Creative Media Division',
         company: 'Kegiatan Ramadhan 1445 H — STMIK Amik Bandung',
         period: '18 Mar 2024',
-        tag: 'Kepanitiaan',
+        tagId: 'Kepanitiaan',
+        tagEn: 'Committee',
         pointsId: [
             'Merancang konsep dan ide untuk program "Ramadhan Podcast"',
             'Menyusun naskah dan daftar pertanyaan wawancara untuk narasumber',
@@ -158,7 +160,8 @@ const orgExperience = [
         titleEn: 'PDD Division',
         company: 'Seminar "Riding The Waves Of Cyber Space"',
         period: '27 Apr 2024',
-        tag: 'Kepanitiaan',
+        tagId: 'Kepanitiaan',
+        tagEn: 'Committee',
         pointsId: [
             'Merancang desain poster, banner, dan sertifikat untuk kebutuhan acara',
             'Bertanggung jawab penuh atas dokumentasi selama acara berlangsung',
@@ -179,6 +182,7 @@ function TimelineColumn({ items, lang }) {
                 {items.map((exp, i) => {
                     const Icon = exp.icon;
                     const points = lang === 'id' ? exp.pointsId : exp.pointsEn;
+                    const tagLabel = lang === 'id' ? exp.tagId : exp.tagEn;
                     return (
                         <div key={i} className="relative pl-12" data-aos="fade-up" data-aos-delay={i * 100}>
                             <div className="absolute left-1.5 w-6 h-6 rounded-full bg-[#0a0f1c] border-2 border-blue-500/40 flex items-center justify-center">
@@ -190,9 +194,9 @@ function TimelineColumn({ items, lang }) {
                                         <h3 className="text-sm font-semibold text-white">
                                             {lang === 'id' ? exp.titleId : exp.titleEn}
                                         </h3>
-                                        {exp.tag && (
+                                        {tagLabel && (
                                             <span className="text-[9px] px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30 font-medium">
-                                                {exp.tag}
+                                                {tagLabel}
                                             </span>
                                         )}
                                     </div>
