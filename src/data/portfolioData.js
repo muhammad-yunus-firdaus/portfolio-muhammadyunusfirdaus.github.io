@@ -1,13 +1,12 @@
 import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaPhp,
-  FaLaravel,
   FaPython,
-  FaFileExcel,
+  FaPhp,
+  FaBrain,
+  FaEye,
+  FaDatabase,
+  FaTools,
+  FaDesktop,
 } from 'react-icons/fa';
-import { SiMysql, SiPostgresql } from 'react-icons/si';
 
 /* ─── Base URL for GitHub Pages ─── */
 const BASE_URL = process.env.PUBLIC_URL || '';
@@ -36,28 +35,24 @@ export const personalInfo = {
 
 /* ─── Skills ─── */
 export const skills = [
-  { name: 'HTML', iconName: 'FaHtml5', color: '#E34F26' },
-  { name: 'CSS', iconName: 'FaCss3Alt', color: '#1572B6' },
-  { name: 'JavaScript', iconName: 'FaJs', color: '#F7DF1E' },
-  { name: 'PHP', iconName: 'FaPhp', color: '#777BB4' },
-  { name: 'Excel', iconName: 'FaFileExcel', color: '#217346' },
-  { name: 'Laravel', iconName: 'FaLaravel', color: '#FF2D20' },
   { name: 'Python', iconName: 'FaPython', isPython: true },
-  { name: 'MySQL', iconName: 'SiMysql', color: '#4479A1' },
-  { name: 'PostgreSQL', iconName: 'SiPostgresql', color: '#336791' },
+  { name: 'PHP', iconName: 'FaPhp', color: '#777BB4' },
+  { name: 'Machine Learning', iconName: 'FaBrain', color: '#FF6F61' },
+  { name: 'YOLOv8', iconName: 'FaEye', color: '#00D4FF' },
+  { name: 'SQL', iconName: 'FaDatabase', color: '#F29111' },
+  { name: 'Hardware Troubleshooting', iconName: 'FaTools', color: '#6B7280' },
+  { name: 'Instalasi Sistem Operasi', iconName: 'FaDesktop', color: '#0078D4' },
 ];
 
 /* ─── Icon Map (for dynamic rendering) ─── */
 export const iconMap = {
-  FaHtml5: FaHtml5,
-  FaCss3Alt: FaCss3Alt,
-  FaJs: FaJs,
-  FaPhp: FaPhp,
-  FaLaravel: FaLaravel,
   FaPython: FaPython,
-  FaFileExcel: FaFileExcel,
-  SiMysql: SiMysql,
-  SiPostgresql: SiPostgresql,
+  FaPhp: FaPhp,
+  FaBrain: FaBrain,
+  FaEye: FaEye,
+  FaDatabase: FaDatabase,
+  FaTools: FaTools,
+  FaDesktop: FaDesktop,
 };
 
 /* ─── Projects ─── */

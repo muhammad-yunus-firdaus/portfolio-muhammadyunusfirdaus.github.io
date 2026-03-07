@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaNetworkWired, FaLaptop, FaTools, FaDesktop, FaUsers, FaPodcast, FaCamera, FaTrophy } from 'react-icons/fa';
+import { FaNetworkWired, FaLaptop, FaMobileAlt, FaKeyboard, FaHdd, FaUsers, FaPodcast, FaCamera, FaTrophy } from 'react-icons/fa';
 import { useLanguage } from '../context/LanguageContext';
 import locales from '../data/locales';
 
@@ -7,66 +7,98 @@ import locales from '../data/locales';
 const workExperience = [
     {
         icon: FaNetworkWired,
-        titleId: 'IT Support',
-        titleEn: 'IT Support',
-        company: 'The Lodge Maribaya, Lembang',
-        period: 'Feb 2021 - Apr 2021',
+        titleId: 'IT Support Intern',
+        titleEn: 'IT Support Intern',
+        company: 'The Lodge Maribaya Lembang',
+        period: 'Apr 2022 - Aug 2022',
         pointsId: [
-            'Mengelola dan instalasi infrastruktur jaringan LAN termasuk crimping dan penarikan kabel',
-            'Konfigurasi dan optimasi perangkat WiFi dan Router',
-            'Maintenance dan troubleshooting perangkat komputer, laptop, dan printer',
-            'Backup data berkala untuk keamanan informasi perusahaan',
+            'Mengelola instalasi infrastruktur jaringan lokal (LAN), crimping, dan penarikan kabel',
+            'Melakukan konfigurasi dan optimasi perangkat WIFI dan Router',
+            'Maintenance dan troubleshooting rutin pada perangkat komputer, laptop, dan printer',
+            'Bertanggung jawab atas backup data berkala untuk integritas informasi perusahaan',
         ],
         pointsEn: [
-            'Managed and installed LAN network infrastructure including crimping and cable pulling',
-            'Configured and optimized WiFi and Router devices',
-            'Performed maintenance and troubleshooting on computers, laptops, and printers',
-            'Conducted regular data backups to ensure company information security',
+            'Managed local network infrastructure (LAN) installation, crimping, and cable pulling',
+            'Configured and optimized WIFI and Router devices',
+            'Performed routine maintenance and troubleshooting on computers, laptops, and printers',
+            'Responsible for regular data backups to ensure company information integrity',
+        ],
+    },
+    {
+        icon: FaMobileAlt,
+        titleId: 'Perbaikan Hardware Mobile',
+        titleEn: 'Mobile Hardware Repair',
+        company: 'Freelance',
+        period: '04 Feb 2026',
+        pointsId: [
+            'Melakukan penggantian unit baterai baru pada perangkat Redmi Note 7 untuk mengatasi kondisi baterai yang sudah drop',
+            'Mengecek ulang sistem pengisian daya (charging) setelah penggantian baterai untuk memastikan baterai terisi dengan stabil dan aman',
+        ],
+        pointsEn: [
+            'Replaced the battery unit on Redmi Note 7 device to resolve depleted battery condition',
+            'Re-checked the charging system after battery replacement to ensure stable and safe charging',
         ],
     },
     {
         icon: FaLaptop,
-        titleId: 'Freelance Teknisi Laptop',
-        titleEn: 'Freelance Laptop Technician',
-        company: 'Self-employed',
-        period: '2022 - 2023',
+        titleId: 'Pemeliharaan Hardware Laptop',
+        titleEn: 'Laptop Hardware Maintenance',
+        company: 'Freelance',
+        period: '31 Jan 2026',
         pointsId: [
-            'Perbaikan hardware laptop berbagai merk',
-            'Penggantian komponen seperti LCD, keyboard, dan baterai',
+            'Mengganti keyboard laptop Asus A456 U yang sudah rusak dengan unit baru yang sesuai agar berfungsi kembali',
+            'Membersihkan debu di bagian dalam laptop dan mengganti pasta prosesor (re-pasting) supaya suhu laptop tetap stabil',
         ],
         pointsEn: [
-            'Repaired laptop hardware for various brands',
-            'Replaced components such as LCD screens, keyboards, and batteries',
+            'Replaced the damaged keyboard on Asus A456 U laptop with a compatible new unit to restore functionality',
+            'Cleaned internal dust and replaced thermal paste (re-pasting) to maintain stable laptop temperature',
         ],
     },
     {
-        icon: FaTools,
-        titleId: 'Freelance Perbaikan Komputer',
-        titleEn: 'Freelance Computer Repair',
-        company: 'Self-employed',
-        period: '2023',
+        icon: FaKeyboard,
+        titleId: 'Servis & Penggantian Keyboard',
+        titleEn: 'Keyboard Service & Replacement',
+        company: 'Freelance',
+        period: '27 Nov 2025',
         pointsId: [
-            'Diagnosa dan perbaikan kerusakan PC',
-            'Instalasi ulang sistem operasi dan optimasi performa',
+            'Mengganti keyboard laptop Asus X441M yang sudah rusak dengan unit baru yang sesuai agar berfungsi kembali',
+            'Membersihkan area motherboard dan kipas agar sirkulasi udara kembali lancar dan suhu laptop tidak cepat panas',
         ],
         pointsEn: [
-            'Diagnosed and repaired PC issues',
-            'Performed OS reinstallation and performance optimization',
+            'Replaced the damaged keyboard on Asus X441M laptop with a compatible new unit to restore functionality',
+            'Cleaned motherboard area and fan to restore proper airflow and prevent laptop overheating',
         ],
     },
     {
-        icon: FaDesktop,
-        titleId: 'Freelance IT Service',
-        titleEn: 'Freelance IT Service',
-        company: 'Self-employed',
-        period: '2024',
+        icon: FaMobileAlt,
+        titleId: 'Perbaikan LCD Smartphone',
+        titleEn: 'Smartphone LCD Repair',
+        company: 'Freelance',
+        period: '21 Aug 2025',
         pointsId: [
-            'Layanan IT on-site meliputi setup jaringan dan instalasi software',
-            'Perawatan dan troubleshooting perangkat',
+            'Membongkar smartphone untuk melepas layar LCD Handphone Oppo yang sudah pecah atau rusak',
+            'Memasang unit LCD baru yang sesuai agar layar bisa digunakan kembali dengan normal',
         ],
         pointsEn: [
-            'Provided on-site IT services including network setup and software installation',
-            'Device maintenance and troubleshooting',
+            'Disassembled smartphone to remove the cracked or damaged LCD screen on Oppo device',
+            'Installed a compatible new LCD unit to restore normal screen functionality',
+        ],
+    },
+    {
+        icon: FaHdd,
+        titleId: 'Servis & Upgrade Laptop',
+        titleEn: 'Laptop Service & Upgrade',
+        company: 'Freelance',
+        period: '25 Dec 2022',
+        pointsId: [
+            'Upgrade penyimpanan dari HDD ke SSD serta instalasi sistem operasi Windows',
+            'Membersihkan debu pada bagian dalam laptop agar sirkulasi udara bagus dan suhu perangkat tidak cepat panas',
+            'Mengganti baterai laptop yang sudah drop dengan unit baru supaya perangkat bisa digunakan kembali dengan awet',
+        ],
+        pointsEn: [
+            'Upgraded storage from HDD to SSD and installed Windows operating system',
+            'Cleaned internal dust to improve airflow and prevent device overheating',
+            'Replaced depleted laptop battery with a new unit to extend device usability',
         ],
     },
 ];
