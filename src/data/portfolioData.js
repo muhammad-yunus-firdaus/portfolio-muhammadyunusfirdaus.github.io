@@ -27,9 +27,9 @@ export const personalInfo = {
   major: 'Teknik Informatika',
   email: 'yunusfirdauss123@gmail.com',
   bioShort:
-    'Mahasiswa Teknik Informatika semester 6 dengan minat dan fokus pada pengembangan web serta AI/Machine Learning.',
+    'Mahasiswa Teknik Informatika semester 6 dengan fokus pada pengembangan Web, Data Engineering, serta Machine Learning.',
   bioLong:
-    'Berfokus mengembangkan aplikasi berbasis web, serta memiliki ketertarikan pada pengolahan data dan penerapan AI. Aktif belajar dan siap berkembang di lingkungan profesional berbasis teknologi.',
+    'Berpengalaman membangun aplikasi web, pengolahan data, dan implementasi model Machine Learning. Siap berkontribusi di lingkungan profesional berbasis teknologi.',
 };
 
 
@@ -37,9 +37,9 @@ export const personalInfo = {
 export const skills = [
   { name: 'Python', iconName: 'FaPython', isPython: true },
   { name: 'PHP', iconName: 'FaPhp', color: '#777BB4' },
-  { name: 'Machine Learning', iconName: 'FaBrain', color: '#FF6F61' },
-  { name: 'YOLOv8', iconName: 'FaEye', color: '#00D4FF' },
   { name: 'SQL', iconName: 'FaDatabase', color: '#F29111' },
+  { name: 'Machine Learning', iconName: 'FaBrain', color: '#FF6F61' },
+/*  { name: 'YOLOv8', iconName: 'FaEye', color: '#00D4FF' },*/
   { name: 'Hardware Troubleshooting', iconName: 'FaTools', color: '#6B7280' },
   { name: 'Instalasi Sistem Operasi', iconName: 'FaDesktop', color: '#0078D4' },
 ];

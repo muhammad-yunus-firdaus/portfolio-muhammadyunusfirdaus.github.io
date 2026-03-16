@@ -64,9 +64,9 @@ const locales = {
 
         /* ─── Bio ─── */
         bioShort:
-            'Mahasiswa Teknik Informatika semester 6 dengan minat dan fokus pada pengembangan web serta AI/Machine Learning.',
+            'Mahasiswa Teknik Informatika semester 6 dengan fokus pada pengembangan Web, Data Engineering, serta Machine Learning.',
         bioLong:
-            'Berfokus mengembangkan aplikasi berbasis web, serta memiliki ketertarikan pada pengolahan data dan penerapan AI. Aktif belajar dan siap berkembang di lingkungan profesional berbasis teknologi.',
+            'Berpengalaman membangun aplikasi web, pengolahan data, dan implementasi model Machine Learning. Siap berkontribusi di lingkungan profesional berbasis teknologi.',
     },
 
     en: {
@@ -134,9 +134,9 @@ const locales = {
 
         /* ─── Bio ─── */
         bioShort:
-            'Informatics Engineering student (6th semester) with interest and focus on web development and AI/Machine Learning.',
+            'Informatics Engineering student (6th semester) with a focus on Web Development, Data Engineering, and Machine Learning.',
         bioLong:
-            'Focused on building web-based applications, with a keen interest in data processing and AI implementation. Actively learning and ready to grow in a technology-driven professional environment.',
+            'Experienced in building web applications, data processing, and implementing Machine Learning models. Ready to contribute in a technology-driven professional environment.',
     },
 };
 
