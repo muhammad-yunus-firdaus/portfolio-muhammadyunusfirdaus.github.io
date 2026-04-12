@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/portfolio-muhammadyunusfirdaus.github.io/static/css/main.96a3ef6c.css",
-    "main.js": "/portfolio-muhammadyunusfirdaus.github.io/static/js/main.75574db9.js",
+    "main.js": "/portfolio-muhammadyunusfirdaus.github.io/static/js/main.d26a143b.js",
     "static/js/453.1c6657c2.chunk.js": "/portfolio-muhammadyunusfirdaus.github.io/static/js/453.1c6657c2.chunk.js",
     "index.html": "/portfolio-muhammadyunusfirdaus.github.io/index.html",
     "main.96a3ef6c.css.map": "/portfolio-muhammadyunusfirdaus.github.io/static/css/main.96a3ef6c.css.map",
-    "main.75574db9.js.map": "/portfolio-muhammadyunusfirdaus.github.io/static/js/main.75574db9.js.map",
+    "main.d26a143b.js.map": "/portfolio-muhammadyunusfirdaus.github.io/static/js/main.d26a143b.js.map",
     "453.1c6657c2.chunk.js.map": "/portfolio-muhammadyunusfirdaus.github.io/static/js/453.1c6657c2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.96a3ef6c.css",
-    "static/js/main.75574db9.js"
+    "static/js/main.d26a143b.js"
   ]
 }
