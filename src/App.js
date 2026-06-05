@@ -34,7 +34,7 @@ export default function App() {
 
   return (
     <LanguageProvider>
-      <div className="bg-[#0a0f1c] text-white min-h-screen w-full overflow-x-hidden custom-cursor">
+      <div className="bg-black text-white min-h-screen w-full overflow-x-hidden custom-cursor">
         <LoadingScreen />
         <CustomCursor />
         <Navbar />

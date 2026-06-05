@@ -39,7 +39,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <header className="fixed top-0 w-full bg-[#0a0f1c]/80 backdrop-blur-xl border-b border-white/5 z-50">
+        <header className="fixed top-0 w-full bg-black/80 backdrop-blur-xl border-b border-white/5 z-50">
             <nav className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
                 {/* Logo */}
                 <button
@@ -61,7 +61,7 @@ export default function Navbar() {
                             key={sec}
                             onClick={() => scrollTo(sec)}
                             className={`px-4 py-2 rounded-lg text-sm font-medium cursor-pointer transition-all duration-300 bg-transparent border-none ${activeSection === sec
-                                ? 'text-blue-400 bg-blue-500/10'
+                                ? 'text-white bg-white/10'
                                 : 'text-slate-400 hover:text-white'
                                 }`}
                         >
@@ -72,7 +72,7 @@ export default function Navbar() {
                     {/* Language Toggle */}
                     <button
                         onClick={toggleLang}
-                        className="ml-2 px-3 py-1.5 rounded-lg text-xs font-bold cursor-pointer transition-all duration-300 bg-white/5 border border-white/10 hover:border-blue-400/40 hover:bg-blue-500/10 text-slate-300 hover:text-white"
+                        className="ml-2 px-3 py-1.5 rounded-lg text-xs font-bold cursor-pointer transition-all duration-300 bg-white/5 border border-white/10 hover:border-white/30 hover:bg-white/5 text-slate-300 hover:text-white"
                         aria-label="Toggle language"
                     >
                         {lang === 'id' ? 'EN' : 'ID'}
@@ -103,13 +103,13 @@ export default function Navbar() {
                 className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                     }`}
             >
-                <div className="px-4 pb-4 space-y-1 bg-[#0a0f1c]/95 backdrop-blur-xl">
+                <div className="px-4 pb-4 space-y-1 bg-black/95 backdrop-blur-xl">
                     {navItems.map((sec) => (
                         <button
                             key={sec}
                             onClick={() => scrollTo(sec)}
                             className={`block w-full text-left px-4 py-3 rounded-lg cursor-pointer transition-all bg-transparent border-none ${activeSection === sec
-                                ? 'text-blue-400 bg-blue-500/10'
+                                ? 'text-white bg-white/10'
                                 : 'text-slate-400 hover:text-white hover:bg-white/5'
                                 }`}
                         >

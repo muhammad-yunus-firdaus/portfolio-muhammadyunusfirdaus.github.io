@@ -10,7 +10,7 @@ export default function About() {
     return (
         <section id="about" className="py-24 px-4 relative">
             {/* Section divider gradient */}
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
 
             <div className="max-w-4xl mx-auto">
                 <h2 className="section-title" data-aos="fade-right">
@@ -20,7 +20,7 @@ export default function About() {
                 <div className="space-y-6">
                     <h3 className="text-2xl font-bold text-white" data-aos="fade-right">
                         {t.aboutSubtitle}{' '}
-                        <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
                             {t.aboutHighlight}
                         </span>{' '}
                         {t.aboutSuffix}
@@ -38,9 +38,9 @@ export default function About() {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             {[
                                 { key: 'name', value: personalInfo.name },
-                                { key: 'faculty', value: personalInfo.faculty },
-                                { key: 'university', value: personalInfo.university },
-                                { key: 'major', value: personalInfo.major },
+                                { key: 'faculty', value: lang === 'id' ? personalInfo.facultyId : personalInfo.facultyEn },
+                                { key: 'university', value: lang === 'id' ? personalInfo.universityId : personalInfo.universityEn },
+                                { key: 'major', value: lang === 'id' ? personalInfo.majorId : personalInfo.majorEn },
                             ].map(({ key, value }) => (
                                 <div key={key} className="flex items-center gap-3">
                                     <span className="text-slate-500 text-sm w-24 shrink-0">

@@ -100,7 +100,7 @@ function PreviewModal({ images, previewSets, title, onClose, lang }) {
                                     onClick={() => handleRoleSwitch(index)}
                                     className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all cursor-pointer border ${
                                         activeRole === index
-                                            ? 'bg-blue-500 text-white border-blue-500'
+                                            ? 'bg-white text-black border-white'
                                             : 'bg-white/10 text-white/70 border-white/20 hover:bg-white/20 hover:text-white'
                                     }`}
                                 >
@@ -138,7 +138,7 @@ function PreviewModal({ images, previewSets, title, onClose, lang }) {
                     <p className="text-white/60 text-sm">
                         {title}
                         {hasMultipleRoles && (
-                            <span className="text-blue-400 ml-2">
+                            <span className="text-slate-300 ml-2">
                                 ({lang === 'id' ? previewSets[activeRole].roleId : previewSets[activeRole].roleEn})
                             </span>
                         )}
@@ -202,7 +202,7 @@ function DetailModal({ project, onClose, onPreview, lang }) {
                             e.target.src = '/api/placeholder/600/300';
                         }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1c] via-[#0a0f1c]/40 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
                     <div className="absolute bottom-4 left-5 right-12">
                         <h3 className="text-xl font-bold text-white mb-1">{title}</h3>
                     </div>
@@ -212,15 +212,15 @@ function DetailModal({ project, onClose, onPreview, lang }) {
                 <div className="p-5 space-y-4">
                     {/* Meta badges */}
                     <div className="flex flex-wrap gap-2">
-                        <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                        <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10">
                             <FaCalendarAlt size={10} />
                             {project.semester} — {project.year}
                         </span>
-                        <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                        <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10">
                             <FaBookOpen size={10} />
                             {course}
                         </span>
-                        <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                        <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10">
                             <FaUsers size={10} />
                             {type}
                         </span>
@@ -256,7 +256,7 @@ function DetailModal({ project, onClose, onPreview, lang }) {
                             {project.technologies.map((tech, i) => (
                                 <span
                                     key={i}
-                                    className="text-xs px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20"
+                                    className="text-xs px-2.5 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10"
                                 >
                                     {tech}
                                 </span>
@@ -268,7 +268,7 @@ function DetailModal({ project, onClose, onPreview, lang }) {
                     <div className="flex gap-2 pt-2">
                         <button
                             onClick={() => { onClose(); onPreview(previewImages, title, hasMultipleRoles ? previewSets : null); }}
-                            className="flex-1 text-center py-2.5 rounded-lg text-sm font-medium border border-white/10 text-slate-300 hover:text-white hover:border-blue-500/30 hover:bg-white/5 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                            className="flex-1 text-center py-2.5 rounded-lg text-sm font-medium border border-white/10 text-slate-300 hover:text-white hover:border-white/20 hover:bg-white/5 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
                         >
                             <FaImages size={14} /> {lang === 'id' ? 'Preview' : 'Preview'}
                         </button>
@@ -290,7 +290,7 @@ function ProjectCard({ project, onPreview, onDetail, previewText, lang }) {
 
     return (
         <div
-            className="glass-card rounded-xl overflow-hidden group hover:border-blue-500/30 transition-all duration-300 flex flex-col h-full cursor-pointer"
+            className="glass-card rounded-xl overflow-hidden group hover:border-white/20 transition-all duration-300 flex flex-col h-full cursor-pointer"
             onClick={() => onDetail(project)}
         >
             {/* Image */}
@@ -305,7 +305,7 @@ function ProjectCard({ project, onPreview, onDetail, previewText, lang }) {
                         e.target.src = '/api/placeholder/300/200';
                     }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1c] to-transparent opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
                 {/* Detail hint icon */}
                 <div className="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <FaInfoCircle className="text-white/70 text-xs" />
@@ -314,7 +314,7 @@ function ProjectCard({ project, onPreview, onDetail, previewText, lang }) {
 
             {/* Content */}
             <div className="p-4 flex-grow flex flex-col">
-                <h3 className="text-base font-semibold mb-1.5 text-white group-hover:text-blue-400 transition-colors duration-300">
+                <h3 className="text-base font-semibold mb-1.5 text-white group-hover:text-white transition-colors duration-300">
                     {title}
                 </h3>
                 <p className="text-slate-400 text-xs mb-3 flex-grow leading-relaxed line-clamp-2">
@@ -327,7 +327,7 @@ function ProjectCard({ project, onPreview, onDetail, previewText, lang }) {
                         {technologies.map((tech, index) => (
                             <span
                                 key={index}
-                                className="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20"
+                                className="text-[10px] px-2 py-0.5 rounded-full bg-white/5 text-slate-300 border border-white/10"
                             >
                                 {tech}
                             </span>
@@ -351,7 +351,7 @@ function ProjectCard({ project, onPreview, onDetail, previewText, lang }) {
 
                     <button
                         onClick={(e) => { e.stopPropagation(); onPreview(imagesToPreview, title, hasMultipleRoles ? previewSets : null); }}
-                        className={`text-center py-2 rounded-lg text-xs font-medium border border-white/10 text-slate-300 hover:text-white hover:border-blue-500/30 hover:bg-white/5 transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer ${demoLink ? 'flex-1' : 'w-full'}`}
+                        className={`text-center py-2 rounded-lg text-xs font-medium border border-white/10 text-slate-300 hover:text-white hover:border-white/20 hover:bg-white/5 transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer ${demoLink ? 'flex-1' : 'w-full'}`}
                     >
                         <FaImages size={10} /> {previewText}
                     </button>
@@ -375,7 +375,7 @@ export default function Projects() {
 
     return (
         <section id="projects" className="py-24 px-4 relative">
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
 
             <div className="max-w-5xl mx-auto">
                 <h2 className="section-title" data-aos="fade-left">
@@ -404,10 +404,10 @@ export default function Projects() {
                 {/* View More */}
                 <div className="text-center mt-10" data-aos="fade-up">
                     <a
-                        href="https://github.com/Yunusss7"
+                        href="https://github.com/muhammad-yunus-firdaus"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium border border-white/10 text-slate-300 hover:text-white hover:border-blue-500/30 hover:bg-white/5 transition-all duration-300"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium border border-white/10 text-slate-300 hover:text-white hover:border-white/20 hover:bg-white/5 transition-all duration-300"
                     >
                         <FaGithub size={16} />
                         <span>{t.viewMore}</span>

@@ -29,7 +29,7 @@ const contactChannels = [
         value: 'Muhammad Yunus Firdaus',
         href: socialLinks.linkedin,
         iconColor: '#0A66C2',
-        hoverBg: 'hover:bg-blue-600/10 hover:border-blue-500/30',
+        hoverBg: 'hover:bg-[#0A66C2]/10 hover:border-[#0A66C2]/30',
         hoverText: 'group-hover:text-[#0A66C2]',
     },
     {
@@ -49,7 +49,7 @@ export default function Contact() {
 
     return (
         <section id="contact" className="py-24 px-4 relative">
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
 
             <div className="max-w-4xl mx-auto text-center">
                 <h2 className="section-title" data-aos="fade-right">

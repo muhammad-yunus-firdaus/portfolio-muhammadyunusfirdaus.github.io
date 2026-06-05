@@ -21,27 +21,30 @@ export const socialLinks = {
 /* ─── Personal Info ─── */
 export const personalInfo = {
   name: 'Muhammad Yunus Firdaus',
-  role: 'Informatics Engineering Student',
-  university: 'Universitas Adhirajasa Reswara Sanjaya',
-  faculty: 'Teknologi Informasi',
-  major: 'Teknik Informatika',
+  roleId: 'Mahasiswa Teknik Informatika',
+  roleEn: 'Informatics Engineering Student',
+  universityId: 'Universitas Adhirajasa Reswara Sanjaya',
+  universityEn: 'Adhirajasa Reswara Sanjaya University',
+  facultyId: 'Teknologi Informasi',
+  facultyEn: 'Information Technology',
+  majorId: 'Teknik Informatika',
+  majorEn: 'Informatics Engineering',
   email: 'yunusfirdauss123@gmail.com',
   bioShort:
-    'Mahasiswa Teknik Informatika semester 6 dengan fokus pada pengembangan Web, Data Engineering, serta Machine Learning.',
+    'Saya adalah individu yang teliti dan bermotivasi tinggi dengan pengalaman sebagai IT Support serta Teknisi Hardware dalam pemeliharaan perangkat dan infrastruktur jaringan.',
   bioLong:
-    'Berpengalaman membangun aplikasi web, pengolahan data, dan implementasi model Machine Learning. Siap berkontribusi di lingkungan profesional berbasis teknologi.',
+    'Didukung keahlian dalam membangun aplikasi web fungsional serta kemampuan memanfaatkan teknologi AI untuk meningkatkan efisiensi kerja, saya siap memberikan kontribusi yang inovatif dan efektif bagi perusahaan, baik secara tim maupun individu.',
 };
 
 
 /* ─── Skills ─── */
 export const skills = [
-  { name: 'Python', iconName: 'FaPython', isPython: true },
-  { name: 'PHP', iconName: 'FaPhp', color: '#777BB4' },
-  { name: 'SQL', iconName: 'FaDatabase', color: '#F29111' },
-  { name: 'Machine Learning', iconName: 'FaBrain', color: '#FF6F61' },
-/*  { name: 'YOLOv8', iconName: 'FaEye', color: '#00D4FF' },*/
-  { name: 'Hardware Troubleshooting', iconName: 'FaTools', color: '#6B7280' },
-  { name: 'Instalasi Sistem Operasi', iconName: 'FaDesktop', color: '#0078D4' },
+  { nameId: 'Python', nameEn: 'Python', iconName: 'FaPython', isPython: true },
+  { nameId: 'PHP', nameEn: 'PHP', iconName: 'FaPhp', color: '#777BB4' },
+  { nameId: 'SQL', nameEn: 'SQL', iconName: 'FaDatabase', color: '#F29111' },
+  { nameId: 'Machine Learning', nameEn: 'Machine Learning', iconName: 'FaBrain', color: '#FF6F61' },
+  { nameId: 'Troubleshooting Hardware', nameEn: 'Hardware Troubleshooting', iconName: 'FaTools', color: '#6B7280' },
+  { nameId: 'Instalasi Sistem Operasi', nameEn: 'Operating System Installation', iconName: 'FaDesktop', color: '#0078D4' },
 ];
 
 /* ─── Icon Map (for dynamic rendering) ─── */

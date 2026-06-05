@@ -15,7 +15,7 @@ export default function Footer() {
     const t = locales[lang];
 
     return (
-        <footer className="relative border-t border-white/5 bg-[#060a14]">
+        <footer className="relative border-t border-white/5 bg-black">
             <div className="max-w-6xl mx-auto px-4 py-10">
                 <div className="flex flex-col items-center gap-6">
                     {/* Social Icons */}
@@ -27,11 +27,11 @@ export default function Footer() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label={label}
-                                className="group p-3 rounded-xl bg-white/5 border border-white/5 hover:border-blue-400/40 hover:bg-blue-500/10 transition-all duration-300"
+                                className="group p-3 rounded-xl bg-white/5 border border-white/5 hover:border-white/30 hover:bg-white/5 transition-all duration-300"
                             >
                                 <Icon
                                     size={18}
-                                    className="text-slate-500 group-hover:text-blue-400 transition-colors duration-300"
+                                    className="text-slate-500 group-hover:text-white transition-colors duration-300"
                                 />
                             </a>
                         ))}

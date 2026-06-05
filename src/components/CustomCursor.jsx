@@ -36,13 +36,13 @@ export default function CustomCursor() {
         const handleMouseDown = () => {
             ring.style.width = '28px';
             ring.style.height = '28px';
-            ring.style.borderColor = 'rgba(59, 130, 246, 0.6)';
+            ring.style.borderColor = 'rgba(255, 255, 255, 0.7)';
         };
 
         const handleMouseUp = () => {
             ring.style.width = '36px';
             ring.style.height = '36px';
-            ring.style.borderColor = 'rgba(59, 130, 246, 0.3)';
+            ring.style.borderColor = 'rgba(255, 255, 255, 0.4)';
         };
 
         // Ring follows with smooth lag
@@ -57,14 +57,14 @@ export default function CustomCursor() {
         const handleHoverIn = () => {
             ring.style.width = '48px';
             ring.style.height = '48px';
-            ring.style.borderColor = 'rgba(59, 130, 246, 0.5)';
-            dot.style.background = 'rgba(59, 130, 246, 0.8)';
+            ring.style.borderColor = 'rgba(255, 255, 255, 0.6)';
+            dot.style.background = 'rgba(255, 255, 255, 0.9)';
         };
 
         const handleHoverOut = () => {
             ring.style.width = '36px';
             ring.style.height = '36px';
-            ring.style.borderColor = 'rgba(59, 130, 246, 0.3)';
+            ring.style.borderColor = 'rgba(255, 255, 255, 0.4)';
             dot.style.background = 'rgba(255, 255, 255, 0.9)';
         };
 
@@ -126,7 +126,7 @@ export default function CustomCursor() {
                     width: '36px',
                     height: '36px',
                     borderRadius: '50%',
-                    border: '1.5px solid rgba(59, 130, 246, 0.3)',
+                    border: '1.5px solid rgba(255, 255, 255, 0.4)',
                     transition: 'width 0.3s, height 0.3s, border-color 0.3s, opacity 0.3s',
                 }}
             />

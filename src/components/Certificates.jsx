@@ -45,7 +45,7 @@ function Lightbox({ image, title, onClose }) {
 function CertificateCard({ image, title, year, issuer, onView, viewText }) {
     return (
         <div
-            className="glass-card rounded-xl overflow-hidden group hover:border-blue-500/30 transition-all duration-300 flex flex-col h-full cursor-pointer"
+            className="glass-card rounded-xl overflow-hidden group hover:border-white/20 transition-all duration-300 flex flex-col h-full cursor-pointer"
             onClick={() => onView(image, title)}
         >
             <div className="relative pt-[56.25%] w-full overflow-hidden">
@@ -61,18 +61,18 @@ function CertificateCard({ image, title, year, issuer, onView, viewText }) {
                 />
                 {/* View overlay */}
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white text-sm font-medium bg-blue-500/80 px-4 py-2 rounded-lg backdrop-blur-sm">
+                    <span className="text-black text-sm font-semibold bg-white/95 px-4 py-2 rounded-lg backdrop-blur-sm">
                         {viewText}
                     </span>
                 </div>
             </div>
             <div className="p-4 flex-grow flex flex-col">
-                <h3 className="text-sm font-semibold mb-1.5 text-white group-hover:text-blue-400 transition-colors duration-300">
+                <h3 className="text-sm font-semibold mb-1.5 text-white group-hover:text-white transition-colors duration-300">
                     {title}
                 </h3>
                 <div className="mt-auto flex items-center justify-between text-xs">
                     <span className="text-slate-400">{issuer}</span>
-                    <span className="text-blue-400/70 font-medium">{year}</span>
+                    <span className="text-slate-400 font-medium">{year}</span>
                 </div>
             </div>
         </div>
@@ -103,7 +103,7 @@ export default function Certificates() {
 
     return (
         <section id="certificates" className="py-24 px-4 relative">
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
 
             <div className="max-w-6xl mx-auto">
                 <h2 className="section-title" data-aos="fade-right">
@@ -118,7 +118,7 @@ export default function Certificates() {
                             onClick={() => setActiveFilter(filter.key)}
                             className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer border ${
                                 activeFilter === filter.key
-                                    ? 'bg-blue-500 text-white border-blue-500'
+                                    ? 'bg-white text-black border-white'
                                     : 'bg-white/5 text-slate-300 border-white/10 hover:bg-white/10 hover:text-white hover:border-white/20'
                             }`}
                         >

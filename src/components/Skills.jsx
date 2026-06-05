@@ -21,7 +21,7 @@ export default function Skills() {
 
     return (
         <section id="skills" className="py-24 px-4 relative">
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
 
             <div className="max-w-6xl mx-auto">
                 <h2 className="section-title" data-aos="fade-left">
@@ -33,10 +33,10 @@ export default function Skills() {
                         const IconComp = iconMap[skill.iconName];
                         return (
                             <div
-                                key={skill.name}
+                                key={skill.nameId}
                                 data-aos={i % 2 === 0 ? 'fade-right' : 'fade-left'}
                                 data-aos-delay={i * 60}
-                                className="glass-card rounded-xl p-6 text-center group hover:border-blue-500/30 cursor-default transition-all duration-300"
+                                className="glass-card rounded-xl p-6 text-center group hover:border-white/20 cursor-default transition-all duration-300"
                             >
                                 <div className="flex flex-col items-center gap-3">
                                     {skill.isPython ? (
@@ -50,7 +50,7 @@ export default function Skills() {
                                         </div>
                                     )}
                                     <span className="text-sm font-medium text-slate-300 group-hover:text-white transition-colors duration-300">
-                                        {skill.name}
+                                        {lang === 'id' ? skill.nameId : skill.nameEn}
                                     </span>
                                 </div>
                             </div>

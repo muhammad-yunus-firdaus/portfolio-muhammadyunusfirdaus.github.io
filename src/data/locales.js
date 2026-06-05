@@ -64,9 +64,9 @@ const locales = {
 
         /* ─── Bio ─── */
         bioShort:
-            'Mahasiswa Teknik Informatika semester 6 dengan fokus pada pengembangan Web, Data Engineering, serta Machine Learning.',
+            'Saya adalah individu yang teliti dan bermotivasi tinggi dengan pengalaman sebagai IT Support serta Teknisi Hardware dalam pemeliharaan perangkat dan infrastruktur jaringan.',
         bioLong:
-            'Berpengalaman membangun aplikasi web, pengolahan data, dan implementasi model Machine Learning. Siap berkontribusi di lingkungan profesional berbasis teknologi.',
+            'Didukung keahlian dalam membangun aplikasi web fungsional serta kemampuan memanfaatkan teknologi AI untuk meningkatkan efisiensi kerja, saya siap memberikan kontribusi yang inovatif dan efektif bagi perusahaan, baik secara tim maupun individu.',
     },
 
     en: {
@@ -134,9 +134,9 @@ const locales = {
 
         /* ─── Bio ─── */
         bioShort:
-            'Informatics Engineering student (6th semester) with a focus on Web Development, Data Engineering, and Machine Learning.',
+            'I am a detail-oriented and highly motivated individual with experience as an IT Support Specialist and Hardware Technician, handling device maintenance and network infrastructure.',
         bioLong:
-            'Experienced in building web applications, data processing, and implementing Machine Learning models. Ready to contribute in a technology-driven professional environment.',
+            'Equipped with skills in building functional web applications and leveraging AI technologies to improve efficiency, I am ready to make an innovative and effective contribution to the company, both in a team and individually.',
     },
 };
 

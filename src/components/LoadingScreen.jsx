@@ -17,7 +17,7 @@ export default function LoadingScreen() {
 
     return (
         <div
-            className={`fixed inset-0 z-[10000] flex items-center justify-center bg-[#0a0f1c] transition-opacity duration-600 ${fadeOut ? 'opacity-0' : 'opacity-100'
+            className={`fixed inset-0 z-[10000] flex items-center justify-center bg-black transition-opacity duration-600 ${fadeOut ? 'opacity-0' : 'opacity-100'
                 }`}
         >
             <div className="flex flex-col items-center gap-4">
@@ -30,7 +30,7 @@ export default function LoadingScreen() {
                 />
                 {/* Loading bar */}
                 <div className="w-32 h-0.5 bg-white/10 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full animate-loading-bar" />
+                    <div className="h-full bg-gradient-to-r from-white to-slate-400 rounded-full animate-loading-bar" />
                 </div>
             </div>
         </div>
