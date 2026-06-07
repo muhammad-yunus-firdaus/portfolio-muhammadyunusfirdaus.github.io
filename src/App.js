@@ -43,22 +43,39 @@ export default function App() {
         <Navbar />
         <Hero />
         <About />
-        <Suspense fallback={<div className="h-40 bg-white/5 animate-pulse rounded-xl m-4" />}>
+
+        {/* Experience — ~900px tall on mobile */}
+        <Suspense fallback={<SectionSkeleton minHeight="900px" />}>
           <LazySection id="experience">
             <Experience />
           </LazySection>
         </Suspense>
+
         <Skills />
-        <Suspense fallback={<div className="h-40 bg-white/5 animate-pulse rounded-xl m-4" />}>
+
+        {/* Certificates — ~600px tall on mobile */}
+        <Suspense fallback={<SectionSkeleton minHeight="600px" />}>
           <LazySection id="certificates">
             <Certificates />
           </LazySection>
+        </Suspense>
+
+        {/* Projects — ~1200px tall on mobile */}
+        <Suspense fallback={<SectionSkeleton minHeight="1200px" />}>
           <LazySection id="projects">
             <Projects />
           </LazySection>
+        </Suspense>
+
+        {/* Contact — ~500px tall on mobile */}
+        <Suspense fallback={<SectionSkeleton minHeight="500px" />}>
           <LazySection id="contact">
             <Contact />
           </LazySection>
+        </Suspense>
+
+        {/* Footer — ~150px tall */}
+        <Suspense fallback={<SectionSkeleton minHeight="150px" />}>
           <LazySection>
             <Footer />
           </LazySection>
@@ -67,5 +84,27 @@ export default function App() {
         <BackToTop />
       </div>
     </LanguageProvider>
+  );
+}
+
+/* ─── Skeleton placeholder ─── */
+function SectionSkeleton({ minHeight = '400px' }) {
+  return (
+    <div
+      style={{ minHeight }}
+      className="w-full py-12 px-4"
+      aria-hidden="true"
+    >
+      {/* Animated shimmer lines that mimic a real section */}
+      <div className="max-w-6xl mx-auto space-y-6">
+        <div className="h-8 w-40 rounded-lg bg-white/5 animate-pulse" />
+        <div className="h-px w-full bg-white/5" />
+        <div className="space-y-4">
+          <div className="h-32 rounded-xl bg-white/5 animate-pulse" />
+          <div className="h-32 rounded-xl bg-white/5 animate-pulse" />
+          <div className="h-32 rounded-xl bg-white/5 animate-pulse" />
+        </div>
+      </div>
+    </div>
   );
 }

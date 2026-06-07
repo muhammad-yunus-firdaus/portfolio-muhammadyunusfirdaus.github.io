@@ -1,30 +1,24 @@
-import React, { useEffect } from 'react';
-import AOS from 'aos';
-
 /**
- * LazySection — simple scroll anchor wrapper.
+ * LazySection — lightweight scroll-anchor wrapper.
  *
- * Intersection-observer lazy rendering has been intentionally removed because
- * smooth-scrolling into a zero-height placeholder (while the real content
- * hasn't mounted yet) causes the scroll animation to fight against rapidly
- * changing page layout, which freezes the browser tab.
+ * Purpose: provide a stable DOM `id` anchor so the Navbar scroll-spy can
+ * always find the right section via getElementById(), regardless of whether
+ * the section's content is still being loaded by React.lazy/Suspense.
  *
- * React.lazy + Suspense in App.js still handles JS bundle code-splitting;
- * this component only provides the `id` anchor and AOS refresh trigger.
+ * Why no IntersectionObserver / conditional rendering here?
+ * ─────────────────────────────────────────────────────────
+ * Previously this component withheld children until the section entered the
+ * viewport. That caused smooth-scroll to land on a zero-height placeholder,
+ * which then expanded when the real content mounted — creating a layout-shift
+ * battle that froze mobile browsers.
+ *
+ * Layout stability is now handled by the <SectionSkeleton> fallback in App.js,
+ * which reserves the correct minimum height while the JS chunk loads.
  */
 export default function LazySection({ children, id }) {
-    useEffect(() => {
-        // Give AOS a tick to discover newly-mounted elements.
-        const timer = setTimeout(() => {
-            AOS.refresh();
-        }, 100);
-        return () => clearTimeout(timer);
-    }, []);
-
     return (
         <div id={id}>
             {children}
         </div>
     );
 }
-
