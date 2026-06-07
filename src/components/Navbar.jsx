@@ -54,7 +54,7 @@ export default function Navbar() {
                     className="cursor-pointer bg-transparent border-none flex items-center"
                 >
                     <img
-                        src={`${process.env.PUBLIC_URL}/logo.png`}
+                        src={`${process.env.PUBLIC_URL}/logo.webp`}
                         alt="Logo"
                         className="w-12 h-12 object-contain"
                         style={{ filter: 'brightness(0) invert(1)' }}

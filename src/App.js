@@ -1,6 +1,4 @@
 import React, { useEffect, Suspense, lazy } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 import { LanguageProvider } from './context/LanguageContext';
 import CustomCursor from './components/CustomCursor';
@@ -12,27 +10,37 @@ import About from './components/About';
 import Skills from './components/Skills';
 import LazySection from './components/LazySection';
 
-const Experience = lazy(() => import('./components/Experience'));
+const Experience   = lazy(() => import('./components/Experience'));
 const Certificates = lazy(() => import('./components/Certificates'));
-const Projects = lazy(() => import('./components/Projects'));
-const Contact = lazy(() => import('./components/Contact'));
-const Footer = lazy(() => import('./components/Footer'));
+const Projects     = lazy(() => import('./components/Projects'));
+const Contact      = lazy(() => import('./components/Contact'));
+const Footer       = lazy(() => import('./components/Footer'));
 
 export default function App() {
   useEffect(() => {
-    AOS.init({
-      duration: 500,
-      once: false,
-      mirror: true,
-      easing: 'ease-out-quad',
-      offset: 50,
-      delay: 0,
-      anchorPlacement: 'bottom-bottom',
-      throttleDelay: 99,
-      debounceDelay: 50,
-      disable: 'mobile', // Disable on mobile for performance
-    });
-    AOS.refresh();
+    // AOS is only useful on desktop (it's already disabled on mobile via config).
+    // Dynamic-import both AOS JS and its CSS so mobile devices never download them.
+    const isMobile = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+    if (!isMobile) {
+      Promise.all([
+        import('aos'),
+        import('aos/dist/aos.css'),
+      ]).then(([{ default: AOS }]) => {
+        AOS.init({
+          duration: 500,
+          once: false,
+          mirror: true,
+          easing: 'ease-out-quad',
+          offset: 50,
+          delay: 0,
+          anchorPlacement: 'bottom-bottom',
+          throttleDelay: 99,
+          debounceDelay: 50,
+          disable: false, // already guarded by the isMobile check above
+        });
+        AOS.refresh();
+      });
+    }
   }, []);
 
   return (
@@ -95,7 +103,6 @@ function SectionSkeleton({ minHeight = '400px' }) {
       className="w-full py-12 px-4"
       aria-hidden="true"
     >
-      {/* Animated shimmer lines that mimic a real section */}
       <div className="max-w-6xl mx-auto space-y-6">
         <div className="h-8 w-40 rounded-lg bg-white/5 animate-pulse" />
         <div className="h-px w-full bg-white/5" />

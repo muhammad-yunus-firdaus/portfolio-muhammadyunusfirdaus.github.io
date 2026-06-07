@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/logo.png" />
+    <link rel="icon" href="%PUBLIC_URL%/logo.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -24,15 +24,28 @@
     <meta property="twitter:description" content="Informatics Engineering Student | Portfolio showcasing Web Development, Data Engineering, and Machine Learning projects." />
     <meta property="twitter:image" content="%PUBLIC_URL%/profile.webp" />
 
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.webp" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Preload LCP image (profile photo shown above the fold) -->
+    <link rel="preload" as="image" href="%PUBLIC_URL%/profile.webp" fetchpriority="high" />
+
+    <!-- Google Fonts: preconnect first, then load non-blocking -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Load font asynchronously: media="print" trick avoids render-blocking -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <!-- Fallback for no-JS -->
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    </noscript>
     <title>Muhammad Yunus | Portfolio</title>
+
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

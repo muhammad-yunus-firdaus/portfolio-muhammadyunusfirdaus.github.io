@@ -61,7 +61,7 @@ export const iconMap = {
 /* ─── Projects ─── */
 export const projects = [
   {
-    image: `${BASE_URL}/Images/manajemen-tugas/Dashboard.png`,
+    image: `${BASE_URL}/Images/manajemen-tugas/Dashboard.webp`,
     titleId: 'Website Manajemen Tugas',
     titleEn: 'Task Management Website',
     shortDescId: 'Website manajemen tugas menggunakan Framework Django dan database SQLite.',
@@ -90,15 +90,15 @@ export const projects = [
     githubLink: 'https://github.com/muhammad-yunus-firdaus',
     technologies: ['Python', 'Django', 'SQLite', 'HTML', 'CSS', 'JavaScript'],
     previewImages: [
-      `${BASE_URL}/Images/manajemen-tugas/Login.png`,
-      `${BASE_URL}/Images/manajemen-tugas/Dashboard.png`,
-      `${BASE_URL}/Images/manajemen-tugas/Daftar_Tugas.png`,
-      `${BASE_URL}/Images/manajemen-tugas/Tambah_Tugas.png`,
-      `${BASE_URL}/Images/manajemen-tugas/Detail_Tugas.png`,
+      `${BASE_URL}/Images/manajemen-tugas/Login.webp`,
+      `${BASE_URL}/Images/manajemen-tugas/Dashboard.webp`,
+      `${BASE_URL}/Images/manajemen-tugas/Daftar_Tugas.webp`,
+      `${BASE_URL}/Images/manajemen-tugas/Tambah_Tugas.webp`,
+      `${BASE_URL}/Images/manajemen-tugas/Detail_Tugas.webp`,
     ],
   },
   {
-    image: `${BASE_URL}/Images/futsal/admin/Kelola_Lapangan_Admin.png`,
+    image: `${BASE_URL}/Images/futsal/admin/Kelola_Lapangan_Admin.webp`,
     titleId: 'Website Pemesanan Lapangan Futsal',
     titleEn: 'Futsal Court Booking Website',
     shortDescId: 'Aplikasi web pemesanan lapangan futsal menggunakan Framework Laravel dan database MySQL.',
@@ -132,27 +132,27 @@ export const projects = [
         roleId: 'Admin',
         roleEn: 'Admin',
         images: [
-          `${BASE_URL}/Images/futsal/admin/Login.png`,
-          `${BASE_URL}/Images/futsal/admin/Dashboard_Admin.png`,
-          `${BASE_URL}/Images/futsal/admin/Jadwal_Booking_Admin.png`,
-          `${BASE_URL}/Images/futsal/admin/Kelola_Booking_Admin.png`,
-          `${BASE_URL}/Images/futsal/admin/Tambah_Booking_Admin.png`,
-          `${BASE_URL}/Images/futsal/admin/Kelola_Lapangan_Admin.png`,
-          `${BASE_URL}/Images/futsal/admin/Tambah_Lapangan_Admin.png`,
-          `${BASE_URL}/Images/futsal/admin/Kelola_Pengguna_Admin.png`,
-          `${BASE_URL}/Images/futsal/admin/Tambah_Pengguna_Admin.png`,
+          `${BASE_URL}/Images/futsal/admin/Login.webp`,
+          `${BASE_URL}/Images/futsal/admin/Dashboard_Admin.webp`,
+          `${BASE_URL}/Images/futsal/admin/Jadwal_Booking_Admin.webp`,
+          `${BASE_URL}/Images/futsal/admin/Kelola_Booking_Admin.webp`,
+          `${BASE_URL}/Images/futsal/admin/Tambah_Booking_Admin.webp`,
+          `${BASE_URL}/Images/futsal/admin/Kelola_Lapangan_Admin.webp`,
+          `${BASE_URL}/Images/futsal/admin/Tambah_Lapangan_Admin.webp`,
+          `${BASE_URL}/Images/futsal/admin/Kelola_Pengguna_Admin.webp`,
+          `${BASE_URL}/Images/futsal/admin/Tambah_Pengguna_Admin.webp`,
         ],
       },
       {
         roleId: 'User',
         roleEn: 'User',
         images: [
-          `${BASE_URL}/Images/futsal/user/Login.png`,
-          `${BASE_URL}/Images/futsal/user/Dashboard_User.png`,
-          `${BASE_URL}/Images/futsal/user/Lapangan_User.png`,
-          `${BASE_URL}/Images/futsal/user/Pemesanan_Lapangan_User.png`,
-          `${BASE_URL}/Images/futsal/user/Jadwal_User.png`,
-          `${BASE_URL}/Images/futsal/user/Riwayat_Pesanan_User.png`,
+          `${BASE_URL}/Images/futsal/user/Login.webp`,
+          `${BASE_URL}/Images/futsal/user/Dashboard_User.webp`,
+          `${BASE_URL}/Images/futsal/user/Lapangan_User.webp`,
+          `${BASE_URL}/Images/futsal/user/Pemesanan_Lapangan_User.webp`,
+          `${BASE_URL}/Images/futsal/user/Jadwal_User.webp`,
+          `${BASE_URL}/Images/futsal/user/Riwayat_Pesanan_User.webp`,
         ],
       },
     ],
@@ -217,35 +217,35 @@ export const projects = [
 export const certificates = [
   // 2025
   {
-    image: 'Prompt_Engineering.jpg',
+    image: 'Prompt_Engineering.webp',
     title: 'Prompt Engineering Untuk Software Developer',
     year: '2025',
     issuer: 'Dicoding',
     category: 'bootcamp',
   },
   {
-    image: 'Belajar_Dasar_AI.jpg',
+    image: 'Belajar_Dasar_AI.webp',
     title: 'Belajar Dasar AI',
     year: '2025',
     issuer: 'Dicoding',
     category: 'bootcamp',
   },
   {
-    image: 'Introduction Back End Development.jpg',
+    image: 'Introduction Back End Development.webp',
     title: 'Introduction Back End Development',
     year: '2025',
     issuer: 'Meta',
     category: 'kursus',
   },
   {
-    image: 'Programming In Python.jpg',
+    image: 'Programming In Python.webp',
     title: 'Programming In Python',
     year: '2025',
     issuer: 'Meta',
     category: 'kursus',
   },
   {
-    image: 'Work Smarter With Microsoft Excel.jpg',
+    image: 'Work Smarter With Microsoft Excel.webp',
     title: 'Work Smarter With Microsoft Excel',
     year: '2025',
     issuer: 'Microsoft',
@@ -253,7 +253,7 @@ export const certificates = [
   },
   // 2024
   {
-    image: 'Leader_Himatif.jpg',
+    image: 'Leader_Himatif.webp',
     title: 'Leader MIPS 2024',
     year: '2024',
     issuer: 'HIMATIF',
@@ -261,14 +261,14 @@ export const certificates = [
   },
   {
     image:
-      'Panitia_Riding The Waves Of Cyber Space _Muhammad Yunus Firdaus.jpg',
+      'Panitia_Riding The Waves Of Cyber Space _Muhammad Yunus Firdaus.webp',
     title: 'Riding The Waves Of Cyber Space',
     year: '2024',
     issuer: 'HIMATIF',
     category: 'kepanitiaan',
   },
   {
-    image: 'Panitia Kegiatan Ramadhan.png',
+    image: 'Panitia Kegiatan Ramadhan.webp',
     title: 'Panitia Kegiatan Ramadhan',
     year: '2024',
     issuer: 'HIMATIF',
@@ -276,17 +276,18 @@ export const certificates = [
   },
   // 2023
   {
-    image: 'Sertifikat 7 Dec.jpg',
+    image: 'Sertifikat 7 Dec.webp',
     title: 'Artificial Intelligence',
     year: '2023',
     issuer: 'TrRecPro',
     category: 'seminar',
   },
   {
-    image: 'E-Certificate Excel.jpg',
+    image: 'E-Certificate Excel.webp',
     title: 'Microsoft Excel Basic',
     year: '2023',
     issuer: 'Coding Studio',
     category: 'seminar',
   },
 ];
+
