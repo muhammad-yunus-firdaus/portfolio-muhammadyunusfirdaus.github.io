@@ -43,7 +43,7 @@ export default function About() {
                                 { key: 'major', value: lang === 'id' ? personalInfo.majorId : personalInfo.majorEn },
                             ].map(({ key, value }) => (
                                 <div key={key} className="flex items-center gap-3">
-                                    <span className="text-slate-500 text-sm w-24 shrink-0">
+                                    <span className="text-slate-400 text-sm w-24 shrink-0">
                                         {t.aboutLabels[key]}
                                     </span>
                                     <span className="text-white text-sm">{value}</span>

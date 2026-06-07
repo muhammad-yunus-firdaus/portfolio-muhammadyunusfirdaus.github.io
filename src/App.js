@@ -49,38 +49,40 @@ export default function App() {
         <LoadingScreen />
         <CustomCursor />
         <Navbar />
-        <Hero />
-        <About />
+        <main>
+          <Hero />
+          <About />
 
-        {/* Experience — ~900px tall on mobile */}
-        <Suspense fallback={<SectionSkeleton minHeight="900px" />}>
-          <LazySection id="experience">
-            <Experience />
-          </LazySection>
-        </Suspense>
+          {/* Experience — ~900px tall on mobile */}
+          <Suspense fallback={<SectionSkeleton minHeight="900px" />}>
+            <LazySection id="experience">
+              <Experience />
+            </LazySection>
+          </Suspense>
 
-        <Skills />
+          <Skills />
 
-        {/* Certificates — ~600px tall on mobile */}
-        <Suspense fallback={<SectionSkeleton minHeight="600px" />}>
-          <LazySection id="certificates">
-            <Certificates />
-          </LazySection>
-        </Suspense>
+          {/* Certificates — ~600px tall on mobile */}
+          <Suspense fallback={<SectionSkeleton minHeight="600px" />}>
+            <LazySection id="certificates">
+              <Certificates />
+            </LazySection>
+          </Suspense>
 
-        {/* Projects — ~1200px tall on mobile */}
-        <Suspense fallback={<SectionSkeleton minHeight="1200px" />}>
-          <LazySection id="projects">
-            <Projects />
-          </LazySection>
-        </Suspense>
+          {/* Projects — ~1200px tall on mobile */}
+          <Suspense fallback={<SectionSkeleton minHeight="1200px" />}>
+            <LazySection id="projects">
+              <Projects />
+            </LazySection>
+          </Suspense>
 
-        {/* Contact — ~500px tall on mobile */}
-        <Suspense fallback={<SectionSkeleton minHeight="500px" />}>
-          <LazySection id="contact">
-            <Contact />
-          </LazySection>
-        </Suspense>
+          {/* Contact — ~500px tall on mobile */}
+          <Suspense fallback={<SectionSkeleton minHeight="500px" />}>
+            <LazySection id="contact">
+              <Contact />
+            </LazySection>
+          </Suspense>
+        </main>
 
         {/* Footer — ~150px tall */}
         <Suspense fallback={<SectionSkeleton minHeight="150px" />}>
