@@ -226,7 +226,7 @@ function TimelineColumn({ items, lang }) {
                                             {exp.period}
                                         </span>
                                     </div>
-                                    <p className="text-[11px] text-slate-500 mb-2">
+                                    <p className="text-[11px] text-slate-400 mb-2">
                                         {lang === 'id' ? exp.companyId : exp.companyEn}
                                     </p>
 
@@ -243,7 +243,7 @@ function TimelineColumn({ items, lang }) {
                                                         <h4 className="text-xs font-semibold text-slate-200">
                                                             {lang === 'id' ? proj.titleId : proj.titleEn}
                                                         </h4>
-                                                        <span className="text-[9px] text-slate-500 shrink-0">
+                                                        <span className="text-[9px] text-slate-400 shrink-0">
                                                             {proj.period}
                                                         </span>
                                                     </div>
@@ -285,7 +285,7 @@ function TimelineColumn({ items, lang }) {
                                         {exp.period}
                                     </span>
                                 </div>
-                                <p className="text-[11px] text-slate-500 mb-2">
+                                <p className="text-[11px] text-slate-400 mb-2">
                                     {lang === 'id' ? exp.companyId : exp.companyEn}
                                 </p>
                                 <ul className="list-disc list-outside pl-4 space-y-0.5">

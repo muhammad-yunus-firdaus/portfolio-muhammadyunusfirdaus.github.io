@@ -31,14 +31,14 @@ export default function Footer() {
                             >
                                 <Icon
                                     size={18}
-                                    className="text-slate-500 group-hover:text-white transition-colors duration-300"
+                                    className="text-slate-400 group-hover:text-white transition-colors duration-300"
                                 />
                             </a>
                         ))}
                     </div>
 
                     {/* Copyright */}
-                    <p className="text-sm text-slate-600">
+                    <p className="text-sm text-slate-400">
                         &copy; {new Date().getFullYear()} {t.footerCopyright}
                     </p>
                 </div>

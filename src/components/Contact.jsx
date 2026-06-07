@@ -85,7 +85,7 @@ export default function Contact() {
                                     />
                                 </div>
                                 <div className="min-w-0 flex-1">
-                                    <p className="text-xs text-slate-500 font-medium uppercase tracking-wider">{label}</p>
+                                    <p className="text-xs text-slate-400 font-medium uppercase tracking-wider">{label}</p>
                                     <p className={`text-white transition-colors duration-300 font-medium mt-0.5 text-sm sm:text-base truncate ${hoverText}`}>
                                         {value}
                                     </p>
