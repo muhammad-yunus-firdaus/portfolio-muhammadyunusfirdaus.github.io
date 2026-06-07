@@ -11,28 +11,33 @@ export default function Navbar() {
     const { lang, toggleLang } = useLanguage();
     const t = locales[lang];
 
-    /* ─── Scroll spy: track which section is in view ─── */
+    /* ─── Scroll spy: track which section is in view (throttled) ─── */
     useEffect(() => {
+        let throttleTimeout = null;
         const handleScroll = () => {
-            // Use getBoundingClientRect for accuracy even after dynamic layout changes.
-            // A section is "active" when its top edge has scrolled to or above the
-            // midpoint of the viewport (offset by the navbar height ~80px).
-            const trigger = window.innerHeight * 0.35; // 35% from top of viewport
+            if (throttleTimeout) return;
+            throttleTimeout = setTimeout(() => {
+                throttleTimeout = null;
+                const trigger = window.innerHeight * 0.35; // 35% from top of viewport
 
-            let current = 'home';
-            for (let i = 0; i < navItems.length; i++) {
-                const el = document.getElementById(navItems[i]);
-                if (!el) continue;
-                const rect = el.getBoundingClientRect();
-                if (rect.top <= trigger) {
-                    current = navItems[i];
+                let current = 'home';
+                for (let i = 0; i < navItems.length; i++) {
+                    const el = document.getElementById(navItems[i]);
+                    if (!el) continue;
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top <= trigger) {
+                        current = navItems[i];
+                    }
                 }
-            }
-            setActiveSection(current);
+                setActiveSection(current);
+            }, 100);
         };
         window.addEventListener('scroll', handleScroll, { passive: true });
         handleScroll(); // run once on mount
-        return () => window.removeEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            if (throttleTimeout) clearTimeout(throttleTimeout);
+        };
     }, []);
 
     /* ─── Native smooth scroll ─── */
