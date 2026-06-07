@@ -310,7 +310,7 @@ export default function Experience() {
     const t = locales[lang];
 
     return (
-        <section id="experience" className="py-24 px-4 relative">
+        <section className="py-24 px-4 relative">
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
 
             <div className="max-w-6xl mx-auto">

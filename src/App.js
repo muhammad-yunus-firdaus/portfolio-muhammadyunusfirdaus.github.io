@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -9,12 +9,14 @@ import BackToTop from './components/BackToTop';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Experience from './components/Experience';
 import Skills from './components/Skills';
-import Certificates from './components/Certificates';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import LazySection from './components/LazySection';
+
+const Experience = lazy(() => import('./components/Experience'));
+const Certificates = lazy(() => import('./components/Certificates'));
+const Projects = lazy(() => import('./components/Projects'));
+const Contact = lazy(() => import('./components/Contact'));
+const Footer = lazy(() => import('./components/Footer'));
 
 export default function App() {
   useEffect(() => {
@@ -28,6 +30,7 @@ export default function App() {
       anchorPlacement: 'bottom-bottom',
       throttleDelay: 99,
       debounceDelay: 50,
+      disable: 'mobile', // Disable on mobile for performance
     });
     AOS.refresh();
   }, []);
@@ -40,12 +43,27 @@ export default function App() {
         <Navbar />
         <Hero />
         <About />
-        <Experience />
+        <Suspense fallback={<div className="h-40 bg-white/5 animate-pulse rounded-xl m-4" />}>
+          <LazySection id="experience">
+            <Experience />
+          </LazySection>
+        </Suspense>
         <Skills />
-        <Certificates />
-        <Projects />
-        <Contact />
-        <Footer />
+        <Suspense fallback={<div className="h-40 bg-white/5 animate-pulse rounded-xl m-4" />}>
+          <LazySection id="certificates">
+            <Certificates />
+          </LazySection>
+          <LazySection id="projects">
+            <Projects />
+          </LazySection>
+          <LazySection id="contact">
+            <Contact />
+          </LazySection>
+          <LazySection>
+            <Footer />
+          </LazySection>
+        </Suspense>
+
         <BackToTop />
       </div>
     </LanguageProvider>

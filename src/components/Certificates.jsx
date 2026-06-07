@@ -33,6 +33,10 @@ function Lightbox({ image, title, onClose }) {
                 <img
                     src={`${process.env.PUBLIC_URL}/certificates/${image}`}
                     alt={title}
+                    width="800"
+                    height="450"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-auto max-h-[85vh] object-contain rounded-xl"
                 />
                 <p className="text-center text-white/60 text-sm mt-3">{title}</p>
@@ -52,8 +56,11 @@ function CertificateCard({ image, title, year, issuer, onView, viewText }) {
                 <img
                     src={`${process.env.PUBLIC_URL}/certificates/${image}`}
                     alt={title}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    width="600"
+                    height="338"
                     loading="lazy"
+                    decoding="async"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     onError={(e) => {
                         e.target.onerror = null;
                         e.target.src = '/api/placeholder/300/200';
@@ -102,7 +109,7 @@ export default function Certificates() {
         : certificates.filter(cert => cert.category === activeFilter);
 
     return (
-        <section id="certificates" className="py-24 px-4 relative">
+        <section className="py-24 px-4 relative">
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
 
             <div className="max-w-6xl mx-auto">

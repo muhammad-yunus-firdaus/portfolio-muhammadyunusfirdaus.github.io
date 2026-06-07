@@ -85,6 +85,10 @@ export default function Hero() {
                                 ref={cardRef}
                                 src={`${process.env.PUBLIC_URL}/profile.webp`}
                                 alt="Muhammad Yunus Firdaus"
+                                width="288"
+                                height="384"
+                                decoding="async"
+                                fetchPriority="high"
                                 className="relative w-56 h-72 sm:w-64 sm:h-80 md:w-72 md:h-96 rounded-2xl object-cover shadow-xl transition-transform duration-200 ease-out will-change-transform"
                             />
                         </div>

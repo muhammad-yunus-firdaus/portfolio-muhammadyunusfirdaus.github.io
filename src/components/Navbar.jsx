@@ -14,17 +14,24 @@ export default function Navbar() {
     /* ─── Scroll spy: track which section is in view ─── */
     useEffect(() => {
         const handleScroll = () => {
-            const scrollY = window.scrollY + 120;
-            for (let i = navItems.length - 1; i >= 0; i--) {
+            // Use getBoundingClientRect for accuracy even after dynamic layout changes.
+            // A section is "active" when its top edge has scrolled to or above the
+            // midpoint of the viewport (offset by the navbar height ~80px).
+            const trigger = window.innerHeight * 0.35; // 35% from top of viewport
+
+            let current = 'home';
+            for (let i = 0; i < navItems.length; i++) {
                 const el = document.getElementById(navItems[i]);
-                if (el && el.offsetTop <= scrollY) {
-                    setActiveSection(navItems[i]);
-                    break;
+                if (!el) continue;
+                const rect = el.getBoundingClientRect();
+                if (rect.top <= trigger) {
+                    current = navItems[i];
                 }
             }
+            setActiveSection(current);
         };
         window.addEventListener('scroll', handleScroll, { passive: true });
-        handleScroll();
+        handleScroll(); // run once on mount
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 

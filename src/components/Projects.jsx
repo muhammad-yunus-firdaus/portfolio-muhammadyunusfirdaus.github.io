@@ -114,6 +114,10 @@ function PreviewModal({ images, previewSets, title, onClose, lang }) {
                 <img
                     src={currentImages[current]}
                     alt={`${title} preview ${current + 1}`}
+                    width="800"
+                    height="450"
+                    loading="lazy"
+                    decoding="async"
                     className={`w-full h-auto max-h-[75vh] object-contain rounded-xl transition-all duration-200 ease-out ${getSlideClass()}`}
                 />
                 {currentImages.length > 1 && (
@@ -196,6 +200,10 @@ function DetailModal({ project, onClose, onPreview, lang }) {
                     <img
                         src={project.image}
                         alt={project.title}
+                        width="800"
+                        height="400"
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover"
                         onError={(e) => {
                             e.target.onerror = null;
@@ -298,8 +306,11 @@ function ProjectCard({ project, onPreview, onDetail, previewText, lang }) {
                 <img
                     src={image}
                     alt={title}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    width="600"
+                    height="300"
                     loading="lazy"
+                    decoding="async"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     onError={(e) => {
                         e.target.onerror = null;
                         e.target.src = '/api/placeholder/300/200';
@@ -374,7 +385,7 @@ export default function Projects() {
     const closeDetail = () => setDetail(null);
 
     return (
-        <section id="projects" className="py-24 px-4 relative">
+        <section className="py-24 px-4 relative">
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
 
             <div className="max-w-5xl mx-auto">
