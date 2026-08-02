@@ -243,7 +243,7 @@ function DetailModal({ project, onClose, onPreview, lang }) {
                     {features && features.length > 0 && (
                         <div>
                             <h4 className="text-sm font-semibold text-white mb-2">
-                                {lang === 'id' ? 'Fitur Utama' : 'Key Features'}
+                                {lang === 'id' ? 'Fitur' : 'Features'}
                             </h4>
                             <ul className="list-disc list-outside pl-4 space-y-1">
                                 {features.map((feat, i) => (

@@ -64,7 +64,7 @@ const locales = {
 
         /* ─── Bio ─── */
         bioShort:
-            'Saya adalah individu yang teliti dan bermotivasi tinggi dengan pengalaman sebagai IT Support serta Teknisi Hardware dalam pemeliharaan perangkat dan infrastruktur jaringan.',
+            'Saya adalah individu yang teliti dan bermotivasi tinggi dalam bekerja dengan pengalaman sebagai IT Support serta Teknisi Hardware dalam pemeliharaan perangkat dan infrastruktur jaringan. Memiliki minat yang mendalam dalam pengembangan teknologi web, cloud computing, machine learning, serta artificial intelligence (AI) untuk terus berkembang di industri teknologi modern.',
         bioLong:
             'Didukung keahlian dalam membangun aplikasi web fungsional serta kemampuan memanfaatkan teknologi AI untuk meningkatkan efisiensi kerja, saya siap memberikan kontribusi yang inovatif dan efektif bagi perusahaan, baik secara tim maupun individu.',
     },
@@ -134,7 +134,7 @@ const locales = {
 
         /* ─── Bio ─── */
         bioShort:
-            'I am a detail-oriented and highly motivated individual with experience as an IT Support Specialist and Hardware Technician, handling device maintenance and network infrastructure.',
+            'I am a detail-oriented and highly motivated individual in my work, with experience as an IT Support Specialist and Hardware Technician in device maintenance and network infrastructure. I have a deep interest in web development, cloud computing, machine learning, and artificial intelligence (AI) to continuously grow in the modern technology industry.',
         bioLong:
             'Equipped with skills in building functional web applications and leveraging AI technologies to improve efficiency, I am ready to make an innovative and effective contribution to the company, both in a team and individually.',
     },
