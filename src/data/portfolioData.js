@@ -233,6 +233,39 @@ export const projects = [
 
 /* ─── Certificates ─── */
 export const certificates = [
+  // 2026
+  {
+    image: 'Belajar Dasar Cloud dan Gen AI di AWS.webp',
+    title: 'Belajar Dasar Cloud dan Gen AI di AWS',
+    year: '2026',
+    issuer: 'Dicoding | AWS AI Academy',
+    category: 'bootcamp',
+    link: 'https://dicoding.com/certificates/1OP8R8VN1ZQK',
+  },
+  {
+    image: 'Belajar Machine Learning untuk Pemula.webp',
+    title: 'Belajar Machine Learning untuk Pemula',
+    year: '2026',
+    issuer: 'Dicoding | AWS AI Academy',
+    category: 'bootcamp',
+    link: 'https://dicoding.com/certificates/98XW01OKWXM3',
+  },
+  {
+    image: 'Spec-Driven Development dengan Kiro.webp',
+    title: 'Spec-Driven Development dengan Kiro',
+    year: '2026',
+    issuer: 'Dicoding | AWS AI Academy',
+    category: 'bootcamp',
+    link: 'https://dicoding.com/certificates/NVP7NLE64ZR0',
+  },
+  {
+    image: 'Memulai Pemrograman dengan Python.webp',
+    title: 'Memulai Pemrograman dengan Python',
+    year: '2026',
+    issuer: 'Dicoding | AWS AI Academy',
+    category: 'bootcamp',
+    link: 'https://dicoding.com/certificates/72ZDJ35LQZYW',
+  },
   // 2025
   {
     image: 'Prompt_Engineering.webp',
