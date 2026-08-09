@@ -1,5 +1,5 @@
-import React from 'react';
-import { FaNetworkWired, FaLaptop, FaMobileAlt, FaKeyboard, FaHdd, FaUsers, FaPodcast, FaCamera, FaTrophy, FaTools } from 'react-icons/fa';
+import React, { useState, useEffect, useCallback } from 'react';
+import { FaNetworkWired, FaLaptop, FaMobileAlt, FaKeyboard, FaHdd, FaUsers, FaPodcast, FaCamera, FaTrophy, FaTools, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useLanguage } from '../context/LanguageContext';
 import locales from '../data/locales';
 
@@ -33,6 +33,36 @@ const workExperience = [
         companyEn: 'Freelance / Self-employed',
         period: 'Des 2022 - Feb 2026',
         isGrouped: true,
+        galleries: [
+            {
+                id: 'laptop',
+                titleId: 'Galeri Servis Laptop',
+                titleEn: 'Laptop Service Gallery',
+                icon: FaLaptop,
+                images: [
+                    '/Images/freelance/laptop/1.webp',
+                    '/Images/freelance/laptop/2.webp',
+                    '/Images/freelance/laptop/3.webp',
+                    '/Images/freelance/laptop/4.webp',
+                    '/Images/freelance/laptop/5.webp',
+                    '/Images/freelance/laptop/6.webp',
+                    '/Images/freelance/laptop/7.webp',
+                    '/Images/freelance/laptop/8.webp',
+                    '/Images/freelance/laptop/9.webp',
+                ]
+            },
+            {
+                id: 'handphone',
+                titleId: 'Galeri Servis Handphone',
+                titleEn: 'Handphone Service Gallery',
+                icon: FaMobileAlt,
+                images: [
+                    '/Images/freelance/handphone/1.webp',
+                    '/Images/freelance/handphone/2.webp',
+                    '/Images/freelance/handphone/3.webp',
+                ]
+            }
+        ],
         projects: [
             {
                 id: 'mobile-redmi',
@@ -200,7 +230,8 @@ const orgExperience = [
 ];
 
 /* ─── Timeline Column Component ─── */
-function TimelineColumn({ items, lang }) {
+function TimelineColumn({ items, lang, onOpenGallery }) {
+    const t = locales[lang];
     return (
         <div className="relative">
             <div className="absolute left-4 top-0 bottom-0 w-px bg-white/10" />
@@ -229,6 +260,26 @@ function TimelineColumn({ items, lang }) {
                                     <p className="text-[11px] text-slate-400 mb-2">
                                         {lang === 'id' ? exp.companyId : exp.companyEn}
                                     </p>
+
+                                    {/* Gallery Buttons */}
+                                    {exp.galleries && exp.galleries.length > 0 && (
+                                        <div className="flex flex-wrap gap-2 my-3">
+                                            {exp.galleries.map((gallery) => {
+                                                const GalleryIcon = gallery.icon;
+                                                const btnLabel = gallery.id === 'laptop' ? t.viewLaptopGallery : t.viewPhoneGallery;
+                                                return (
+                                                    <button
+                                                        key={gallery.id}
+                                                        onClick={() => onOpenGallery(gallery.images, lang === 'id' ? gallery.titleId : gallery.titleEn)}
+                                                        className="flex items-center gap-1.5 px-3 py-1.5 text-[10px] text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-lg transition-all cursor-pointer duration-200"
+                                                    >
+                                                        <GalleryIcon size={11} className="text-slate-400" />
+                                                        <span>{btnLabel}</span>
+                                                    </button>
+                                                );
+                                            })}
+                                        </div>
+                                    )}
 
                                     {/* Nested sub-timeline */}
                                     <div className="mt-4 relative pl-5 border-l border-white/10 space-y-4">
@@ -304,10 +355,107 @@ function TimelineColumn({ items, lang }) {
     );
 }
 
+/* ─── Lightbox Modal for Freelance Galleries ─── */
+function ExperienceLightbox({ images, title, activeIndex, setActiveIndex, onClose }) {
+    const handleNext = useCallback(() => {
+        setActiveIndex((prev) => (prev + 1) % images.length);
+    }, [images.length, setActiveIndex]);
+
+    const handlePrev = useCallback(() => {
+        setActiveIndex((prev) => (prev - 1 + images.length) % images.length);
+    }, [images.length, setActiveIndex]);
+
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === 'Escape') onClose();
+            if (e.key === 'ArrowRight') handleNext();
+            if (e.key === 'ArrowLeft') handlePrev();
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [onClose, handleNext, handlePrev]);
+
+    if (!images || images.length === 0) return null;
+
+    const currentImage = images[activeIndex];
+
+    return (
+        <div
+            className="fixed inset-0 z-[9000] flex items-center justify-center bg-black/90 backdrop-blur-sm animate-fadeIn"
+            onClick={onClose}
+        >
+            <div
+                className="relative max-w-3xl w-[90%] max-h-[85vh] flex flex-col items-center"
+                onClick={(e) => e.stopPropagation()}
+            >
+                {/* Close Button */}
+                <button
+                    onClick={onClose}
+                    className="absolute -top-12 right-0 text-white/70 hover:text-white text-2xl cursor-pointer bg-transparent border-none p-2 transition-colors duration-200"
+                    aria-label="Close"
+                >
+                    ✕
+                </button>
+
+                {/* Main Content Area */}
+                <div className="relative w-full flex items-center justify-center group">
+                    {/* Navigation Buttons (only show if multiple images exist) */}
+                    {images.length > 1 && (
+                        <>
+                            <button
+                                onClick={handlePrev}
+                                className="absolute left-2 sm:-left-14 z-10 p-3 rounded-full bg-black/50 border border-white/10 text-white/80 hover:text-white hover:bg-black/80 transition-all cursor-pointer"
+                                aria-label="Previous image"
+                            >
+                                <FaChevronLeft size={18} />
+                            </button>
+                            <button
+                                onClick={handleNext}
+                                className="absolute right-2 sm:-right-14 z-10 p-3 rounded-full bg-black/50 border border-white/10 text-white/80 hover:text-white hover:bg-black/80 transition-all cursor-pointer"
+                                aria-label="Next image"
+                            >
+                                <FaChevronRight size={18} />
+                            </button>
+                        </>
+                    )}
+
+                    {/* Image */}
+                    <img
+                        src={`${process.env.PUBLIC_URL}${currentImage}`}
+                        alt={`${title} - ${activeIndex + 1}`}
+                        className="w-full h-auto max-h-[70vh] object-contain rounded-xl select-none"
+                    />
+                </div>
+
+                {/* Caption & Counter */}
+                <div className="text-center mt-4 space-y-1">
+                    <p className="text-white text-sm font-medium">{title}</p>
+                    {images.length > 1 && (
+                        <p className="text-slate-400 text-xs">
+                            {activeIndex + 1} / {images.length}
+                        </p>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+}
+
 /* ─── Main Section ─── */
 export default function Experience() {
     const { lang } = useLanguage();
     const t = locales[lang];
+    const [activeGallery, setActiveGallery] = useState(null);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    const handleOpenGallery = (images, title) => {
+        setActiveGallery({ images, title });
+        setCurrentImageIndex(0);
+    };
+
+    const handleCloseGallery = () => {
+        setActiveGallery(null);
+    };
 
     return (
         <section className="py-24 px-4 relative">
@@ -325,7 +473,7 @@ export default function Experience() {
                             <span className="w-2 h-2 rounded-full bg-white" />
                             {t.workExpLabel}
                         </h3>
-                        <TimelineColumn items={workExperience} lang={lang} />
+                        <TimelineColumn items={workExperience} lang={lang} onOpenGallery={handleOpenGallery} />
                     </div>
 
                     {/* Right — Organizational Experience */}
@@ -334,10 +482,21 @@ export default function Experience() {
                             <span className="w-2 h-2 rounded-full bg-white" />
                             {t.orgExpLabel}
                         </h3>
-                        <TimelineColumn items={orgExperience} lang={lang} />
+                        <TimelineColumn items={orgExperience} lang={lang} onOpenGallery={handleOpenGallery} />
                     </div>
                 </div>
             </div>
+
+            {/* Lightbox Rendering */}
+            {activeGallery && (
+                <ExperienceLightbox
+                    images={activeGallery.images}
+                    title={activeGallery.title}
+                    activeIndex={currentImageIndex}
+                    setActiveIndex={setCurrentImageIndex}
+                    onClose={handleCloseGallery}
+                />
+            )}
         </section>
     );
 }
