@@ -32,8 +32,8 @@ const locales = {
         experienceTitle: 'Pengalaman',
         workExpLabel: 'Pengalaman Kerja',
         orgExpLabel: 'Organisasi & Kepanitiaan',
-        viewLaptopGallery: 'Galeri Laptop',
-        viewPhoneGallery: 'Galeri HP',
+        viewLaptopGallery: 'Dokumentasi Laptop',
+        viewPhoneGallery: 'Dokumentasi HP',
 
         /* ─── Skills ─── */
         skillsTitle: 'Keahlian Saya',
@@ -104,8 +104,8 @@ const locales = {
         experienceTitle: 'Experience',
         workExpLabel: 'Work Experience',
         orgExpLabel: 'Organization & Committee',
-        viewLaptopGallery: 'Laptop Gallery',
-        viewPhoneGallery: 'Phone Gallery',
+        viewLaptopGallery: 'Laptop Docs',
+        viewPhoneGallery: 'Phone Docs',
 
         /* ─── Skills ─── */
         skillsTitle: 'My Skills',

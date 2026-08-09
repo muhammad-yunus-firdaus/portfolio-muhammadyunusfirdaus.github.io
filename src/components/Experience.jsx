@@ -36,8 +36,8 @@ const workExperience = [
         galleries: [
             {
                 id: 'laptop',
-                titleId: 'Galeri Servis Laptop',
-                titleEn: 'Laptop Service Gallery',
+                titleId: 'Dokumentasi Laptop',
+                titleEn: 'Laptop Docs',
                 icon: FaLaptop,
                 images: [
                     '/Images/freelance/laptop/1.webp',
@@ -53,8 +53,8 @@ const workExperience = [
             },
             {
                 id: 'handphone',
-                titleId: 'Galeri Servis Handphone',
-                titleEn: 'Handphone Service Gallery',
+                titleId: 'Dokumentasi HP',
+                titleEn: 'Phone Docs',
                 icon: FaMobileAlt,
                 images: [
                     '/Images/freelance/handphone/1.webp',
