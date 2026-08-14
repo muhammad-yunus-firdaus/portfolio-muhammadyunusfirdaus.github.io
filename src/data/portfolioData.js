@@ -235,6 +235,13 @@ export const projects = [
 export const certificates = [
   // 2026
   {
+    image: 'Sertifikat AWS AI Academy - Muhammad Yunus Firdaus.webp',
+    title: 'AWS AI Academy',
+    year: '2026',
+    issuer: 'Dicoding | AWS AI Academy',
+    category: 'bootcamp',
+  },
+  {
     image: 'Belajar Dasar Cloud dan Gen AI di AWS.webp',
     title: 'Belajar Dasar Cloud dan Gen AI di AWS',
     year: '2026',
